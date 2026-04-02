@@ -1,4 +1,4 @@
-# Requirements: VitePress 技术博客与开源文档站
+# Requirements: VitePress Technical Blog + Documentation Site
 
 **Defined:** 2026-04-02
 **Core Value:** AI 驱动的智能内容发现 — 通过 Algolia Ask AI 实现问答式检索
@@ -118,57 +118,57 @@ Explicitly excluded. Documented to prevent scope creep.
 
 Which phases cover which requirements. Updated during roadmap creation.
 
-| Requirement | Phase | Status |
-|-------------|-------|--------|
-| FND-01 | Phase 1 | Pending |
-| FND-02 | Phase 1 | Pending |
-| FND-03 | Phase 1 | Pending |
-| FND-04 | Phase 1 | Pending |
-| FND-05 | Phase 1 | Pending |
-| FND-06 | Phase 1 | Pending |
-| FND-07 | Phase 1 | Pending |
-| NAV-01 | Phase 2 | Pending |
-| NAV-02 | Phase 2 | Pending |
-| NAV-03 | Phase 2 | Pending |
-| NAV-04 | Phase 2 | Pending |
-| SCH-01 | Phase 3 | Pending |
-| SCH-02 | Phase 3 | Pending |
-| SCH-03 | Phase 3 | Pending |
-| SCH-04 | Phase 3 | Pending |
-| CMT-01 | Phase 4 | Pending |
-| CMT-02 | Phase 4 | Pending |
-| CMT-03 | Phase 4 | Pending |
-| CMT-04 | Phase 4 | Pending |
-| RSS-01 | Phase 4 | Pending |
-| RSS-02 | Phase 4 | Pending |
-| RSS-03 | Phase 4 | Pending |
-| MDX-01 | Phase 5 | Pending |
-| MDX-02 | Phase 5 | Pending |
-| MDX-03 | Phase 5 | Pending |
-| MDX-04 | Phase 5 | Pending |
-| MDX-05 | Phase 5 | Pending |
-| ARC-01 | Phase 6 | Pending |
-| ARC-02 | Phase 6 | Pending |
-| ARC-03 | Phase 6 | Pending |
-| ARC-04 | Phase 6 | Pending |
-| ARC-05 | Phase 6 | Pending |
-| ARC-06 | Phase 6 | Pending |
-| UX-01 | Phase 7 | Pending |
-| UX-02 | Phase 7 | Pending |
-| UX-03 | Phase 7 | Pending |
-| UX-04 | Phase 7 | Pending |
-| DEP-01 | Phase 8 | Pending |
-| DEP-02 | Phase 8 | Pending |
-| DEP-03 | Phase 8 | Pending |
-| DEP-04 | Phase 8 | Pending |
-| DEP-05 | Phase 8 | Pending |
-| DEP-06 | Phase 8 | Pending |
+| Requirement | Phase | Status | Success Criteria |
+|-------------|-------|--------|------------------|
+| FND-01 | Phase 1 | Pending | VitePress dev server starts |
+| FND-02 | Phase 1 | Pending | Directory structure defined |
+| FND-03 | Phase 1 | Pending | Theme extension configured |
+| FND-04 | Phase 1 | Pending | Frontmatter standard defined |
+| FND-05 | Phase 1 | Pending | Frontmatter validation works |
+| FND-06 | Phase 1 | Pending | Base path configures correctly |
+| FND-07 | Phase 1 | Pending | Dark mode toggle works |
+| NAV-01 | Phase 2 | Pending | Auto-nav reflects directory changes |
+| NAV-02 | Phase 2 | Pending | Auto-sidebar shows hierarchy |
+| NAV-03 | Phase 2 | Pending | _meta.json overrides work |
+| NAV-04 | Phase 2 | Pending | Order field sorts correctly |
+| SCH-01 | Phase 3 | Pending | DocSearch configured |
+| SCH-02 | Phase 3 | Pending | Ask AI returns answers |
+| SCH-03 | Phase 3 | Pending | Local fallback works |
+| SCH-04 | Phase 3 | Pending | Search weighting works |
+| CMT-01 | Phase 4 | Pending | Giscus comments load |
+| CMT-02 | Phase 4 | Pending | Theme sync works |
+| CMT-03 | Phase 4 | Pending | Lazy loading works |
+| CMT-04 | Phase 4 | Pending | Language switching works |
+| RSS-01 | Phase 4 | Pending | RSS feed valid |
+| RSS-02 | Phase 4 | Pending | Atom feed valid |
+| RSS-03 | Phase 4 | Pending | Subscribe page exists |
+| MDX-01 | Phase 5 | Pending | Mermaid diagrams render |
+| MDX-02 | Phase 5 | Pending | Math equations render |
+| MDX-03 | Phase 5 | Pending | Footnotes work |
+| MDX-04 | Phase 5 | Pending | Code line numbers show |
+| MDX-05 | Phase 5 | Pending | Copy button works |
+| ARC-01 | Phase 6 | Pending | Metadata extraction works |
+| ARC-02 | Phase 6 | Pending | Archive JSON generated |
+| ARC-03 | Phase 6 | Pending | Timeline view works |
+| ARC-04 | Phase 6 | Pending | Tags view works |
+| ARC-05 | Phase 6 | Pending | Categories view works |
+| ARC-06 | Phase 6 | Pending | All articles page works |
+| UX-01 | Phase 7 | Pending | Back-to-top button works |
+| UX-02 | Phase 7 | Pending | Progress bar updates |
+| UX-03 | Phase 7 | Pending | TOC highlight follows scroll |
+| UX-04 | Phase 7 | Pending | Scrollbar styled |
+| DEP-01 | Phase 8 | Pending | CI/CD workflow runs |
+| DEP-02 | Phase 8 | Pending | GitHub Pages deploys |
+| DEP-03 | Phase 8 | Pending | Vercel deploys |
+| DEP-04 | Phase 8 | Pending | Sitemap generated |
+| DEP-05 | Phase 8 | Pending | Robots.txt configured |
+| DEP-06 | Phase 8 | Pending | OG/Twitter cards render |
 
 **Coverage:**
 - v1 requirements: 43 total
 - Mapped to phases: 43
-- Unmapped: 0 ✓
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-02*
-*Last updated: 2026-04-02 after initial definition*
+*Last updated: 2026-04-02 after roadmap creation*
