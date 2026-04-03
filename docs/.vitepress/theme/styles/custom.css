@@ -1,0 +1,31 @@
+/* Custom CSS Variables extending VitePress defaults */
+:root {
+  /* Light mode custom variables */
+  --custom-accent: #3eaf7c;
+  --custom-accent-light: #4ec89e;
+}
+
+.dark {
+  /* Dark mode custom variables */
+  --custom-accent: #4ec89e;
+  --custom-accent-light: #6dd9b4;
+}
+
+/* Custom scrollbar styling for WebKit browsers (Phase 7: UX-04) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
