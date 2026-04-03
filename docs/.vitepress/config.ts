@@ -10,9 +10,9 @@ const config: UserConfig = {
   base: '/',
 
   // Markdown configuration
+  // Math support will be enabled in Phase 5 with markdown-it-mathjax3
   markdown: {
-    lineNumbers: true,
-    math: true
+    lineNumbers: true
   },
 
   themeConfig: {
