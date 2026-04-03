@@ -10,11 +10,19 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
-  "keywords": ["vitepress", "blog", "tech", "documentation"],
+  "keywords": [
+    "vitepress",
+    "blog",
+    "tech",
+    "documentation"
+  ],
   "author": "HK-hub",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "globby": "^16.2.0",
+    "gray-matter": "^4.0.3",
+    "tsx": "^4.21.0",
     "typescript": "^5.0.0",
     "vitepress": "^1.6.0",
     "vitest": "^2.0.0",
