@@ -6,7 +6,7 @@ import type { UserConfig } from 'vitepress'
 // Vercel: BASE_URL=/ (or leave unset)
 // Default: /
 
-function detectBasePath(): string {
+export function detectBasePath(): string {
   // Priority 1: Explicit BASE_URL environment variable
   if (process.env.BASE_URL) {
     // Ensure it starts with / and ends with /
