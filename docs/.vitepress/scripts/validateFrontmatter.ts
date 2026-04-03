@@ -33,7 +33,20 @@ export async function validateAllFrontmatter(): Promise<void> {
       continue
     }
 
-    const result = frontmatterSchema.safeParse(data)
+    // Skip VitePress special pages (home page, layout pages)
+    if (data.layout) {
+      continue
+    }
+
+    // Handle gray-matter's Date parsing for YYYY-MM-DD format
+    // gray-matter converts date strings like '2026-04-02' to Date objects
+    // We need to convert them back to strings for Zod validation
+    const processedData = { ...data }
+    if (processedData.date instanceof Date) {
+      processedData.date = processedData.date.toISOString().split('T')[0]
+    }
+
+    const result = frontmatterSchema.safeParse(processedData)
 
     if (!result.success) {
       const fileName = relative(srcDir, file)
@@ -56,8 +69,10 @@ export async function validateAllFrontmatter(): Promise<void> {
   console.log(`Validated frontmatter in ${validatedCount} file(s)`)
 }
 
-// Run validation if called directly
-if (import.meta.url === `file://${process.argv[1]}`.replace(/\\/g, '/')) {
+// Run validation if called directly via npx tsx or node
+const isMainModule = process.argv[1]?.includes('validateFrontmatter.ts')
+if (isMainModule) {
+  console.log('Running frontmatter validation...')
   validateAllFrontmatter().catch(err => {
     console.error('Validation error:', err)
     process.exit(1)

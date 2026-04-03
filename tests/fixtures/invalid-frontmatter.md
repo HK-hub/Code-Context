@@ -1,8 +1,8 @@
 ---
 title: Test
-# Missing required fields: date, categories, tags
+# Missing required field: date
 ---
 
 # Invalid Frontmatter Test
 
-This file has invalid frontmatter for testing.
+This file has invalid frontmatter for testing validation failure.
