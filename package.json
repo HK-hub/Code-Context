@@ -1,0 +1,24 @@
+{
+  "name": "hk-hub-tech-blog",
+  "version": "1.0.0",
+  "description": "技术博客与开源文档站 - VitePress Technical Blog",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": ["vitepress", "blog", "tech", "documentation"],
+  "author": "HK-hub",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitepress": "^1.6.0",
+    "vitest": "^2.0.0",
+    "vue": "^3.4.0",
+    "zod": "^3.0.0"
+  }
+}
