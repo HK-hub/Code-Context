@@ -11,6 +11,16 @@
   --custom-accent-light: #6dd9b4;
 }
 
+/* Content width - use VitePress default (~960px) */
+.VPDoc .content-container {
+  /* Remove custom override, use default width */
+}
+
+/* Aside (outline) - use VitePress default width (~256px) */
+.VPDoc .aside {
+  /* Remove custom override, use default width */
+}
+
 /* Custom scrollbar styling for WebKit browsers (Phase 7: UX-04) */
 ::-webkit-scrollbar {
   width: 8px;

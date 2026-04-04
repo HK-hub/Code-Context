@@ -11,6 +11,7 @@ tags:
 description: 这是一篇示例文章，展示 VitePress 技术博客的 frontmatter 格式
 author: HK-hub
 order: 1
+author_type: original
 ---
 
 # 示例文章

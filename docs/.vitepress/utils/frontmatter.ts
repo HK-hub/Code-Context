@@ -31,7 +31,12 @@ export const frontmatterSchema = z.object({
   author: z.string().default('HK-hub'),
   order: z.number().optional(),
   sticky: z.boolean().default(false),
-  draft: z.boolean().default(false)
+  draft: z.boolean().default(false),
+
+  // Article type fields
+  author_type: z.enum(['original', 'reprint']).default('original'),
+  source_url: z.string().url().optional(),
+  source_title: z.string().optional()
 })
 
 export type Frontmatter = z.infer<typeof frontmatterSchema>

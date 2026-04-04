@@ -1,7 +1,7 @@
 {
-  "name": "hk-hub-tech-blog",
+  "name": "code-context",
   "version": "1.0.0",
-  "description": "技术博客与开源文档站 - VitePress Technical Blog",
+  "description": "码出意境 - Code Context 技术博客与开源文档站",
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
@@ -12,6 +12,8 @@
     "validate": "tsx docs/.vitepress/scripts/validateFrontmatter.ts"
   },
   "keywords": [
+    "code-context",
+    "码出意境",
     "vitepress",
     "blog",
     "tech",
@@ -20,14 +22,22 @@
   "author": "HK-hub",
   "license": "MIT",
   "devDependencies": {
+    "@iconify/vue": "^5.0.0",
     "@types/node": "^20.0.0",
     "globby": "^16.2.0",
     "gray-matter": "^4.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "tsx": "^4.21.0",
     "typescript": "^5.0.0",
     "vitepress": "^1.6.0",
+    "vitepress-plugin-sidebar": "^1.0.1",
     "vitest": "^2.0.0",
     "vue": "^3.4.0",
     "zod": "^3.0.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "^14.2.1",
+    "vitepress-plugin-image-viewer": "^1.1.6",
+    "vitepress-plugin-mermaid": "^2.0.17"
   }
 }

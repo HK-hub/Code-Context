@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { onMounted } from 'vue'
+import { computed, onMounted, watch, ref } from 'vue'
+import PostMeta from './components/PostMeta.vue'
+import BackToTop from './components/BackToTop.vue'
 
-const { isDark } = useData()
+const { isDark, frontmatter } = useData()
+const route = useRoute()
+
+// Check if current page is a post (has date in frontmatter)
+const isPost = computed(() => frontmatter.value.date)
 
 // Ensure dark mode preference is properly initialized
 onMounted(() => {
@@ -14,17 +20,24 @@ onMounted(() => {
 
 <template>
   <DefaultTheme.Layout>
-    <!-- Custom slot overrides for future phases -->
+    <!-- Post meta info after title -->
+    <template #doc-before>
+      <PostMeta v-if="isPost" />
+    </template>
+
+    <!-- Dark mode toggle in navbar -->
     <template #nav-bar-content-after>
       <!-- Dark mode toggle will be injected here by VitePress when appearance: true -->
     </template>
 
+    <!-- Footer area (for comments etc.) -->
     <template #doc-footer-before>
       <!-- Reserved for Phase 4: Giscus comments -->
     </template>
 
+    <!-- Bottom layout area -->
     <template #layout-bottom>
-      <!-- Reserved for Phase 7: Back-to-top button -->
+      <BackToTop />
     </template>
   </DefaultTheme.Layout>
 </template>
