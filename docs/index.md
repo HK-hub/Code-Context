@@ -2,9 +2,13 @@
 layout: home
 
 hero:
-  name: HK-hub Tech Blog
+  name: 码出意境
   text: 技术博客与开源文档站
   tagline: 分享技术，记录成长
+  image:
+    light: /hero-logo.svg
+    dark: /hero-logo-dark.svg
+    alt: 码出意境 Logo
   actions:
     - theme: brand
       text: 开始阅读
