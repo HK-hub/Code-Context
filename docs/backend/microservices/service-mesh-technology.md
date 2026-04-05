@@ -1,9 +1,17 @@
 ---
 title: 服务网格技术解析
-date: 2025-03-20
-categories: [backend, microservices]
-tags: [服务网格, Istio, Envoy, 微服务, 云原生]
+date: 2025-03-20T00:00:00.000Z
+categories:
+  - backend
+  - microservices
+tags:
+  - 服务网格
+  - Istio
+  - Envoy
+  - 微服务
+  - 云原生
 description: 服务网格核心概念、Istio架构、流量管理、安全策略与可观测性详解
+author: HK意境
 ---
 
 # 服务网格技术解析

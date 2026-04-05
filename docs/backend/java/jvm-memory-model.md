@@ -1,9 +1,17 @@
 ---
 title: JVM内存模型详解
-date: 2025-02-08
-categories: [backend, java]
-tags: [Java, JVM, 内存模型, GC, 性能优化]
+date: 2025-02-08T00:00:00.000Z
+categories:
+  - backend
+  - java
+tags:
+  - Java
+  - JVM
+  - 内存模型
+  - GC
+  - 性能优化
 description: 深入解析JVM内存结构、垃圾回收机制、内存溢出分析与性能调优实践
+author: HK意境
 ---
 
 # JVM内存模型详解

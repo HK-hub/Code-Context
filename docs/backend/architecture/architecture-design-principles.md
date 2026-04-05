@@ -1,9 +1,17 @@
 ---
 title: 架构设计原则总结
-date: 2025-03-28
-categories: [backend, architecture]
-tags: [架构设计, SOLID原则, 设计原则, 软件架构, 最佳实践]
+date: 2025-03-28T00:00:00.000Z
+categories:
+  - backend
+  - architecture
+tags:
+  - 架构设计
+  - SOLID原则
+  - 设计原则
+  - 软件架构
+  - 最佳实践
 description: 软件架构设计核心原则、SOLID原则、高内聚低耦合与架构决策最佳实践
+author: HK意境
 ---
 
 # 架构设计原则总结

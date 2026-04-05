@@ -1,9 +1,17 @@
 ---
 title: Go微服务架构示例与实践
-date: 2025-03-20
-categories: [projects, demos]
-tags: [Go, 微服务, gRPC, Docker, Kubernetes]
+date: 2025-03-20T00:00:00.000Z
+categories:
+  - projects
+  - demos
+tags:
+  - Go
+  - 微服务
+  - gRPC
+  - Docker
+  - Kubernetes
 description: 通过完整的微服务示例项目展示Go语言构建微服务架构的实践，包括服务拆分、通信机制、部署策略
+author: HK意境
 ---
 
 # Go微服务架构示例与实践

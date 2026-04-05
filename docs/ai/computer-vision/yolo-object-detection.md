@@ -1,9 +1,17 @@
 ---
 title: 目标检测YOLO教程：从原理到实践
-date: 2025-02-25
-categories: [ai, computer-vision]
-tags: [目标检测, YOLO, 深度学习, 边界框, 非极大值抑制]
+date: 2025-02-25T00:00:00.000Z
+categories:
+  - ai
+  - computer-vision
+tags:
+  - 目标检测
+  - YOLO
+  - 深度学习
+  - 边界框
+  - 非极大值抑制
 description: 深入讲解YOLO目标检测算法的原理与实现，包括版本演进、核心技术和实战应用
+author: HK意境
 ---
 
 # 目标检测YOLO教程：从原理到实践

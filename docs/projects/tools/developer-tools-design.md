@@ -1,9 +1,17 @@
 ---
 title: 开发辅助工具设计与实现
-date: 2025-03-08
-categories: [projects, tools]
-tags: [开发工具, 效率提升, VS Code, Chrome扩展, 工具设计]
+date: 2025-03-08T00:00:00.000Z
+categories:
+  - projects
+  - tools
+tags:
+  - 开发工具
+  - 效率提升
+  - VS Code
+  - Chrome扩展
+  - 工具设计
 description: 探讨各类开发辅助工具的设计理念与实现方法，包括IDE插件、浏览器扩展、命令行工具等提升开发效率的实用工具
+author: HK意境
 ---
 
 # 开发辅助工具设计与实现

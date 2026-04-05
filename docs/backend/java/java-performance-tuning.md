@@ -1,9 +1,17 @@
 ---
 title: Java性能调优指南
-date: 2025-03-25
-categories: [backend, java]
-tags: [Java, 性能优化, JVM调优, GC, 监控]
+date: 2025-03-25T00:00:00.000Z
+categories:
+  - backend
+  - java
+tags:
+  - Java
+  - 性能优化
+  - JVM调优
+  - GC
+  - 监控
 description: 系统讲解Java应用性能调优的方法论、工具使用、常见问题诊断与优化实践
+author: HK意境
 ---
 
 # Java性能调优指南

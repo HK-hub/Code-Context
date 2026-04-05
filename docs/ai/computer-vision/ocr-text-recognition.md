@@ -1,9 +1,17 @@
 ---
 title: OCR文字识别实践：从图像到文本
-date: 2025-03-28
-categories: [ai, computer-vision]
-tags: [OCR, 文字识别, 深度学习, CRNN, 文本检测]
+date: 2025-03-28T00:00:00.000Z
+categories:
+  - ai
+  - computer-vision
+tags:
+  - OCR
+  - 文字识别
+  - 深度学习
+  - CRNN
+  - 文本检测
 description: 全面讲解OCR文字识别技术，包括文本检测、文字识别和端到端系统的设计与实现
+author: HK意境
 ---
 
 # OCR文字识别实践：从图像到文本

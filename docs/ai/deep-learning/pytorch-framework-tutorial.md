@@ -1,9 +1,17 @@
 ---
 title: PyTorch框架教程：从入门到实战
-date: 2025-02-12
-categories: [ai, deep-learning]
-tags: [PyTorch, 深度学习, 框架教程, 张量操作, 模型构建]
+date: 2025-02-12T00:00:00.000Z
+categories:
+  - ai
+  - deep-learning
+tags:
+  - PyTorch
+  - 深度学习
+  - 框架教程
+  - 张量操作
+  - 模型构建
 description: 全面讲解PyTorch框架的核心功能，包括张量操作、自动求导、模型构建与训练流程
+author: HK意境
 ---
 
 # PyTorch框架教程：从入门到实战

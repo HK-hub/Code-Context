@@ -1,9 +1,18 @@
 ---
 title: 开源社区建设心得与运营实践
-date: 2025-04-01
-categories: [projects, opensource]
-tags: [开源, 社区运营, 社区建设, Discord, 贡献者, 用户运营]
+date: 2025-04-01T00:00:00.000Z
+categories:
+  - projects
+  - opensource
+tags:
+  - 开源
+  - 社区运营
+  - 社区建设
+  - Discord
+  - 贡献者
+  - 用户运营
 description: 分享开源社区建设与运营的实战经验，从社区架构设计、用户增长策略、贡献者培养到长期维护的全方位指南
+author: HK意境
 ---
 
 # 开源社区建设心得与运营实践

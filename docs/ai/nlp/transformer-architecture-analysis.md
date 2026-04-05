@@ -1,9 +1,17 @@
 ---
 title: Transformer架构分析：注意力机制的核心原理
-date: 2025-02-28
-categories: [ai, nlp]
-tags: [Transformer, 注意力机制, 自注意力, BERT, GPT]
+date: 2025-02-28T00:00:00.000Z
+categories:
+  - ai
+  - nlp
+tags:
+  - Transformer
+  - 注意力机制
+  - 自注意力
+  - BERT
+  - GPT
 description: 深入解析Transformer架构的核心组件，包括自注意力机制、多头注意力、位置编码和编码器-解码器结构
+author: HK意境
 ---
 
 # Transformer架构分析：注意力机制的核心原理

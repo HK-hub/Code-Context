@@ -1,9 +1,17 @@
 ---
 title: 团队协作的感悟与心得
-date: 2025-02-25
-categories: [blog, experiences]
-tags: [团队协作, 沟通技巧, 项目管理, 工作效率, 软技能]
+date: 2025-02-25T00:00:00.000Z
+categories:
+  - blog
+  - experiences
+tags:
+  - 团队协作
+  - 沟通技巧
+  - 项目管理
+  - 工作效率
+  - 软技能
 description: 在团队项目中积累的协作经验，包括沟通方法、冲突处理和效率提升技巧
+author: HK意境
 ---
 
 # 团队协作的感悟与心得

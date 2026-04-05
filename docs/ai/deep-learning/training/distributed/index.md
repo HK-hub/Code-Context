@@ -1,8 +1,9 @@
 ---
 title: Distributed
-date: 2026-04-05
+date: 2026-04-05T00:00:00.000Z
 categories:
   - 目录索引
+author: HK意境
 ---
 
 # Distributed

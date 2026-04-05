@@ -1,9 +1,17 @@
 ---
 title: Java设计模式实践
-date: 2025-03-12
-categories: [backend, java]
-tags: [Java, 设计模式, 面向对象, 架构设计, 代码重构]
+date: 2025-03-12T00:00:00.000Z
+categories:
+  - backend
+  - java
+tags:
+  - Java
+  - 设计模式
+  - 面向对象
+  - 架构设计
+  - 代码重构
 description: 深入讲解23种设计模式及其在Java开发中的实际应用，包含丰富的代码示例和最佳实践
+author: HK意境
 ---
 
 # Java设计模式实践

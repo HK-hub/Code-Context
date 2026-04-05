@@ -1,9 +1,17 @@
 ---
 title: 图像分类实战：从数据到模型
-date: 2025-02-05
-categories: [ai, computer-vision]
-tags: [图像分类, CNN, 深度学习, 数据增强, PyTorch]
+date: 2025-02-05T00:00:00.000Z
+categories:
+  - ai
+  - computer-vision
+tags:
+  - 图像分类
+  - CNN
+  - 深度学习
+  - 数据增强
+  - PyTorch
 description: 全面讲解图像分类任务的技术栈，包括数据准备、模型训练、迁移学习和模型优化
+author: HK意境
 ---
 
 # 图像分类实战：从数据到模型

@@ -1,9 +1,17 @@
 ---
 title: RAG检索增强生成：让LLM拥有外部知识
-date: 2025-02-20
-categories: [ai, llm]
-tags: [RAG, 检索增强, 向量数据库, LLM, 知识检索]
+date: 2025-02-20T00:00:00.000Z
+categories:
+  - ai
+  - llm
+tags:
+  - RAG
+  - 检索增强
+  - 向量数据库
+  - LLM
+  - 知识检索
 description: 深入讲解RAG技术的原理与实现，包括向量检索、知识库构建和端到端系统设计
+author: HK意境
 ---
 
 # RAG检索增强生成：让LLM拥有外部知识

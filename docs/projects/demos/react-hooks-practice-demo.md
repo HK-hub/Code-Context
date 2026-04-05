@@ -1,9 +1,17 @@
 ---
 title: React Hooks实践示例与模式探索
-date: 2025-02-28
-categories: [projects, demos]
-tags: [React, Hooks, 前端开发, 状态管理, 组件设计]
+date: 2025-02-28T00:00:00.000Z
+categories:
+  - projects
+  - demos
+tags:
+  - React
+  - Hooks
+  - 前端开发
+  - 状态管理
+  - 组件设计
 description: 通过丰富的实践示例深入探讨React Hooks的使用模式，包括自定义Hooks设计、性能优化和最佳实践
+author: HK意境
 ---
 
 # React Hooks实践示例与模式探索

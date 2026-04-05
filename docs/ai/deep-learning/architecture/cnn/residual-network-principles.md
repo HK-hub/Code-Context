@@ -1,11 +1,12 @@
 ---
 title: Residual Network Principles
-date: 2026-04-03
+date: 2026-04-03T00:00:00.000Z
 categories:
   - ai - deep-learning - architecture - cnn
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Residual Network Principles

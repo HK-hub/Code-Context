@@ -1,9 +1,17 @@
 ---
 title: 从零搭建Vue3项目完整指南
-date: 2025-01-20
-categories: [blog, tutorials]
-tags: [Vue3, Vite, 项目搭建, TypeScript, 前端框架]
+date: 2025-01-20T00:00:00.000Z
+categories:
+  - blog
+  - tutorials
+tags:
+  - Vue3
+  - Vite
+  - 项目搭建
+  - TypeScript
+  - 前端框架
 description: 详细的Vue3项目搭建教程，从环境准备到项目配置，涵盖TypeScript、路由、状态管理等核心功能
+author: HK意境
 ---
 
 # 从零搭建Vue3项目完整指南

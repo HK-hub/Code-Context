@@ -1,9 +1,17 @@
 ---
 title: Git分支管理完全指南
-date: 2025-02-28
-categories: [blog, tutorials]
-tags: [Git, 分支管理, 版本控制, 团队协作, 开发流程]
+date: 2025-02-28T00:00:00.000Z
+categories:
+  - blog
+  - tutorials
+tags:
+  - Git
+  - 分支管理
+  - 版本控制
+  - 团队协作
+  - 开发流程
 description: 系统性讲解Git分支创建、合并、冲突解决等操作，帮助开发者掌握高效的分支管理技巧
+author: HK意境
 ---
 
 # Git分支管理完全指南

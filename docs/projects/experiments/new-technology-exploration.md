@@ -1,9 +1,17 @@
 ---
 title: 新技术探索实验方法论与实践
-date: 2025-01-25
-categories: [projects, experiments]
-tags: [新技术, 实验方法, 技术探索, 学习策略, 技术选型]
+date: 2025-01-25T00:00:00.000Z
+categories:
+  - projects
+  - experiments
+tags:
+  - 新技术
+  - 实验方法
+  - 技术探索
+  - 学习策略
+  - 技术选型
 description: 分享新技术探索实验的系统性方法论，包括技术调研、原型验证、实验设计和结果评估的完整流程
+author: HK意境
 ---
 
 # 新技术探索实验方法论与实践

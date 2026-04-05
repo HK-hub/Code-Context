@@ -1,9 +1,17 @@
 ---
 title: 开源贡献的心路历程
-date: 2025-03-08
-categories: [blog, experiences]
-tags: [开源, GitHub, 技术贡献, 社区参与, 个人成长]
+date: 2025-03-08T00:00:00.000Z
+categories:
+  - blog
+  - experiences
+tags:
+  - 开源
+  - GitHub
+  - 技术贡献
+  - 社区参与
+  - 个人成长
 description: 从观望到参与，分享开源贡献的经历、收获和感悟，以及给新人的建议
+author: HK意境
 ---
 
 # 开源贡献的心路历程

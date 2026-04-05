@@ -1,9 +1,17 @@
 ---
 title: MVC架构模式详解
-date: 2025-02-05
-categories: [backend, architecture]
-tags: [MVC, 架构模式, 分层架构, Web开发, 设计模式]
+date: 2025-02-05T00:00:00.000Z
+categories:
+  - backend
+  - architecture
+tags:
+  - MVC
+  - 架构模式
+  - 分层架构
+  - Web开发
+  - 设计模式
 description: MVC架构模式原理、实现方式、优缺点分析与现代Web应用实践
+author: HK意境
 ---
 
 # MVC架构模式详解

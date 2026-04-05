@@ -1,9 +1,17 @@
 ---
 title: CNN架构设计：卷积神经网络原理与实战
-date: 2025-02-25
-categories: [ai, deep-learning]
-tags: [CNN, 卷积神经网络, 图像处理, 深度学习, PyTorch]
+date: 2025-02-25T00:00:00.000Z
+categories:
+  - ai
+  - deep-learning
+tags:
+  - CNN
+  - 卷积神经网络
+  - 图像处理
+  - 深度学习
+  - PyTorch
 description: 深入解析CNN的核心组件，包括卷积层、池化层、经典架构设计及PyTorch实现
+author: HK意境
 ---
 
 # CNN架构设计：卷积神经网络原理与实战

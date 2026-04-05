@@ -1,9 +1,18 @@
 ---
 title: 开源许可证选择指南与实践分析
-date: 2025-03-25
-categories: [projects, opensource]
-tags: [开源, 许可证, MIT, Apache, GPL, 法律]
+date: 2025-03-25T00:00:00.000Z
+categories:
+  - projects
+  - opensource
+tags:
+  - 开源
+  - 许可证
+  - MIT
+  - Apache
+  - GPL
+  - 法律
 description: 全面解析主流开源许可证的特点、适用场景和选择策略，帮助开发者做出正确的许可证决策
+author: HK意境
 ---
 
 # 开源许可证选择指南与实践分析

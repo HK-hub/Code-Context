@@ -1,9 +1,17 @@
 ---
 title: Markdown写作技巧与实践
-date: 2025-03-18
-categories: [blog, tutorials]
-tags: [Markdown, 写作技巧, 文档规范, 内容创作, 技术写作]
+date: 2025-03-18T00:00:00.000Z
+categories:
+  - blog
+  - tutorials
+tags:
+  - Markdown
+  - 写作技巧
+  - 文档规范
+  - 内容创作
+  - 技术写作
 description: Markdown写作的进阶技巧和最佳实践，帮助你提升技术文档和博客文章的写作质量
+author: HK意境
 ---
 
 # Markdown写作技巧与实践

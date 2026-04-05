@@ -1,9 +1,17 @@
 ---
 title: 开源精神感悟
-date: 2025-03-12
-categories: [blog, thoughts]
-tags: [开源, 社区, 分享, 协作, 精神]
+date: 2025-03-12T00:00:00.000Z
+categories:
+  - blog
+  - thoughts
+tags:
+  - 开源
+  - 社区
+  - 分享
+  - 协作
+  - 精神
 description: 对开源精神的深入思考，探讨分享、协作、开放的核心价值
+author: HK意境
 ---
 
 # 开源精神感悟

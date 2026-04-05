@@ -1,9 +1,17 @@
 ---
 title: GPT模型原理深度解析
-date: 2025-01-30
-categories: [ai, llm]
-tags: [GPT, 大语言模型, 自回归生成, Transformer, 预训练]
+date: 2025-01-30T00:00:00.000Z
+categories:
+  - ai
+  - llm
+tags:
+  - GPT
+  - 大语言模型
+  - 自回归生成
+  - Transformer
+  - 预训练
 description: 深入解析GPT系列模型的核心原理，包括自回归生成、预训练策略和模型架构演进
+author: HK意境
 ---
 
 # GPT模型原理深度解析

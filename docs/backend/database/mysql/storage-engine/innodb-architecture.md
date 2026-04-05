@@ -1,11 +1,12 @@
 ---
 title: Innodb Architecture
-date: 2026-04-01
+date: 2026-04-01T00:00:00.000Z
 categories:
   - backend - database - mysql - storage-engine
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Innodb Architecture

@@ -1,9 +1,17 @@
 ---
 title: LLM应用开发指南：从理论到实践
-date: 2025-03-22
-categories: [ai, llm]
-tags: [LLM应用, API开发, Agent, 工具调用, 应用架构]
+date: 2025-03-22T00:00:00.000Z
+categories:
+  - ai
+  - llm
+tags:
+  - LLM应用
+  - API开发
+  - Agent
+  - 工具调用
+  - 应用架构
 description: 全面讲解大语言模型应用开发的关键技术，包括API集成、Agent设计、工具调用和生产部署
+author: HK意境
 ---
 
 # LLM应用开发指南：从理论到实践

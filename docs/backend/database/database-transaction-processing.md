@@ -1,9 +1,17 @@
 ---
 title: 数据库事务处理详解
-date: 2025-02-20
-categories: [backend, database]
-tags: [数据库, 事务, ACID, 并发控制, 分布式事务]
+date: 2025-02-20T00:00:00.000Z
+categories:
+  - backend
+  - database
+tags:
+  - 数据库
+  - 事务
+  - ACID
+  - 并发控制
+  - 分布式事务
 description: 数据库事务ACID特性、并发控制机制、锁机制、分布式事务解决方案详解
+author: HK意境
 ---
 
 # 数据库事务处理详解

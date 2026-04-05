@@ -1,9 +1,17 @@
 ---
 title: 人脸识别原理：从检测到识别
-date: 2025-03-15
-categories: [ai, computer-vision]
-tags: [人脸识别, 人脸检测, 特征提取, 深度学习, ArcFace]
+date: 2025-03-15T00:00:00.000Z
+categories:
+  - ai
+  - computer-vision
+tags:
+  - 人脸识别
+  - 人脸检测
+  - 特征提取
+  - 深度学习
+  - ArcFace
 description: 系统讲解人脸识别的技术流程，包括人脸检测、特征提取、人脸比对和活体检测
+author: HK意境
 ---
 
 # 人脸识别原理：从检测到识别

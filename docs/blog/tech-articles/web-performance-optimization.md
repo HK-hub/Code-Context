@@ -1,9 +1,17 @@
 ---
 title: Web性能优化实战指南
-date: 2025-03-12
-categories: [blog, tech-articles]
-tags: [性能优化, Web性能, Core Web Vitals, 前端优化, 用户体验]
+date: 2025-03-12T00:00:00.000Z
+categories:
+  - blog
+  - tech-articles
+tags:
+  - 性能优化
+  - Web性能
+  - Core Web Vitals
+  - 前端优化
+  - 用户体验
 description: 系统性的Web性能优化实践，涵盖加载性能、运行时性能和渲染优化的完整方案
+author: HK意境
 ---
 
 # Web性能优化实战指南

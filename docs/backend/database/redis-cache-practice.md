@@ -1,9 +1,17 @@
 ---
 title: Redis缓存应用实践
-date: 2025-02-12
-categories: [backend, database]
-tags: [Redis, 缓存, 分布式锁, 消息队列, 数据结构]
+date: 2025-02-12T00:00:00.000Z
+categories:
+  - backend
+  - database
+tags:
+  - Redis
+  - 缓存
+  - 分布式锁
+  - 消息队列
+  - 数据结构
 description: Redis核心数据结构、缓存策略、分布式锁、消息队列与最佳实践详解
+author: HK意境
 ---
 
 # Redis缓存应用实践

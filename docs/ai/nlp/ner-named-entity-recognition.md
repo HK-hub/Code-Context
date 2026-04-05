@@ -1,9 +1,17 @@
 ---
 title: NER命名实体识别：从规则到深度学习
-date: 2025-03-12
-categories: [ai, nlp]
-tags: [NER, 命名实体识别, 序列标注, BiLSTM-CRF, BERT]
+date: 2025-03-12T00:00:00.000Z
+categories:
+  - ai
+  - nlp
+tags:
+  - NER
+  - 命名实体识别
+  - 序列标注
+  - BiLSTM-CRF
+  - BERT
 description: 全面讲解命名实体识别技术，包括传统方法、深度学习模型和BERT-based方案
+author: HK意境
 ---
 
 # NER命名实体识别：从规则到深度学习

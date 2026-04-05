@@ -1,5 +1,7 @@
 ---
 title: HContext 项目文档
+date: '2026-04-05'
+author: HK意境
 ---
 
 # HContext 项目文档

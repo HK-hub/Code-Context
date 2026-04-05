@@ -1,9 +1,17 @@
 ---
 title: GitHub协作最佳实践与工作流优化
-date: 2025-02-15
-categories: [projects, opensource]
-tags: [GitHub, Git, 协作, 工作流, 团队开发]
+date: 2025-02-15T00:00:00.000Z
+categories:
+  - projects
+  - opensource
+tags:
+  - GitHub
+  - Git
+  - 协作
+  - 工作流
+  - 团队开发
 description: 深入探讨GitHub协作的最佳实践，包括分支策略、PR管理、代码审查和团队协作工作流的优化方案
+author: HK意境
 ---
 
 # GitHub协作最佳实践与工作流优化

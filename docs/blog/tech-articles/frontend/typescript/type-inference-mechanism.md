@@ -1,11 +1,12 @@
 ---
 title: Type Inference Mechanism
-date: 2026-04-03
+date: 2026-04-03T00:00:00.000Z
 categories:
   - blog - tech-articles - frontend - typescript
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Type Inference Mechanism

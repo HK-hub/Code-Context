@@ -1,11 +1,12 @@
 ---
 title: Table Inheritance
-date: 2026-04-03
+date: 2026-04-03T00:00:00.000Z
 categories:
   - backend - database - postgresql - advanced-features
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Table Inheritance

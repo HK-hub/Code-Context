@@ -1,9 +1,17 @@
 ---
 title: 原型开发实践与快速验证方法论
-date: 2025-03-28
-categories: [projects, experiments]
-tags: [原型开发, MVP, 快速验证, 敏捷开发, 产品设计]
+date: 2025-03-28T00:00:00.000Z
+categories:
+  - projects
+  - experiments
+tags:
+  - 原型开发
+  - MVP
+  - 快速验证
+  - 敏捷开发
+  - 产品设计
 description: 探讨原型开发的系统方法论，包括原型类型选择、快速开发技巧、验证策略和迭代优化实践
+author: HK意境
 ---
 
 # 原型开发实践与快速验证方法论

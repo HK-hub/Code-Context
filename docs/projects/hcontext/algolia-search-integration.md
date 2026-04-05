@@ -1,9 +1,17 @@
 ---
 title: Algolia搜索功能集成实践
-date: 2025-02-20
-categories: [projects, hcontext]
-tags: [Algolia, 搜索, AI, DocSearch, 索引优化]
+date: 2025-02-20T00:00:00.000Z
+categories:
+  - projects
+  - hcontext
+tags:
+  - Algolia
+  - 搜索
+  - AI
+  - DocSearch
+  - 索引优化
 description: 详细介绍如何在VitePress中集成Algolia搜索服务，包括DocSearch配置、Ask AI功能实现和索引优化策略
+author: HK意境
 ---
 
 # Algolia搜索功能集成实践

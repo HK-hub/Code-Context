@@ -1,9 +1,17 @@
 ---
 title: 开源项目维护经验与心得分享
-date: 2025-03-10
-categories: [projects, opensource]
-tags: [开源, 项目维护, 版本管理, 社区运营, 开发者]
+date: 2025-03-10T00:00:00.000Z
+categories:
+  - projects
+  - opensource
+tags:
+  - 开源
+  - 项目维护
+  - 版本管理
+  - 社区运营
+  - 开发者
 description: 分享开源项目维护的实战经验，包括版本规划、Issue管理、社区建设、文档维护和心理建设等方面的深度思考
+author: HK意境
 ---
 
 # 开源项目维护经验与心得分享

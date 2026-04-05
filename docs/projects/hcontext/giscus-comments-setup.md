@@ -1,9 +1,17 @@
 ---
 title: Giscus评论系统配置指南
-date: 2025-03-05
-categories: [projects, hcontext]
-tags: [Giscus, GitHub Discussions, 评论系统, VitePress, Vue3]
+date: 2025-03-05T00:00:00.000Z
+categories:
+  - projects
+  - hcontext
+tags:
+  - Giscus
+  - GitHub Discussions
+  - 评论系统
+  - VitePress
+  - Vue3
 description: 完整的Giscus评论系统集成指南，包括GitHub仓库配置、Giscus设置、VitePress集成和主题适配
+author: HK意境
 ---
 
 # Giscus评论系统配置指南

@@ -1,9 +1,17 @@
 ---
 title: 词向量模型详解：从Word2Vec到FastText
-date: 2025-02-15
-categories: [ai, nlp]
-tags: [词向量, Word2Vec, FastText, GloVe, 嵌入表示]
+date: 2025-02-15T00:00:00.000Z
+categories:
+  - ai
+  - nlp
+tags:
+  - 词向量
+  - Word2Vec
+  - FastText
+  - GloVe
+  - 嵌入表示
 description: 深入解析词向量模型的原理与实现，包括Word2Vec的CBOW和Skip-gram模型、GloVe全局向量、FastText子词嵌入
+author: HK意境
 ---
 
 # 词向量模型详解：从Word2Vec到FastText

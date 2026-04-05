@@ -1,9 +1,17 @@
 ---
 title: Prompt工程实践：高效利用大语言模型
-date: 2025-02-18
-categories: [ai, llm]
-tags: [Prompt工程, 大语言模型, Few-shot, Chain-of-Thought, 提示词]
+date: 2025-02-18T00:00:00.000Z
+categories:
+  - ai
+  - llm
+tags:
+  - Prompt工程
+  - 大语言模型
+  - Few-shot
+  - Chain-of-Thought
+  - 提示词
 description: 系统讲解Prompt工程的核心技术，包括提示词设计原则、高级技巧和最佳实践
+author: HK意境
 ---
 
 # Prompt工程实践：高效利用大语言模型

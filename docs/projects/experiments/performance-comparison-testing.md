@@ -1,9 +1,16 @@
 ---
 title: 性能对比测试方法论与实践
-date: 2025-02-05
-categories: [projects, experiments]
-tags: [性能测试, 基准测试, 对比分析, 性能优化]
+date: 2025-02-05T00:00:00.000Z
+categories:
+  - projects
+  - experiments
+tags:
+  - 性能测试
+  - 基准测试
+  - 对比分析
+  - 性能优化
 description: 详解性能对比测试的系统方法，包括测试设计、环境搭建、数据采集和结果分析方法论
+author: HK意境
 ---
 
 # 性能对比测试方法论与实践

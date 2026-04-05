@@ -1,9 +1,17 @@
 ---
 title: 持续学习之道
-date: 2025-04-01
-categories: [blog, thoughts]
-tags: [学习方法, 持续学习, 自我提升, 知识管理, 成长思维]
+date: 2025-04-01T00:00:00.000Z
+categories:
+  - blog
+  - thoughts
+tags:
+  - 学习方法
+  - 持续学习
+  - 自我提升
+  - 知识管理
+  - 成长思维
 description: 探讨在技术快速变化的时代如何保持持续学习的能力和热情
+author: HK意境
 ---
 
 # 持续学习之道

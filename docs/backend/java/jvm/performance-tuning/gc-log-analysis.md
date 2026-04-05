@@ -1,11 +1,12 @@
 ---
 title: Gc Log Analysis
-date: 2026-04-02
+date: 2026-04-02T00:00:00.000Z
 categories:
   - backend - java - jvm - performance-tuning
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Gc Log Analysis

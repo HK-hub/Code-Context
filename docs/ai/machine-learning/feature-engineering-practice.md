@@ -1,9 +1,17 @@
 ---
 title: 特征工程实践：数据预处理与特征构建
-date: 2025-02-08
-categories: [ai, machine-learning]
-tags: [特征工程, 数据预处理, 特征选择, sklearn, 数据科学]
+date: 2025-02-08T00:00:00.000Z
+categories:
+  - ai
+  - machine-learning
+tags:
+  - 特征工程
+  - 数据预处理
+  - 特征选择
+  - sklearn
+  - 数据科学
 description: 系统讲解特征工程的核心技术，包括数据清洗、特征变换、特征选择与构建方法
+author: HK意境
 ---
 
 # 特征工程实践：数据预处理与特征构建

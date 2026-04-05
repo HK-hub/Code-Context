@@ -1,9 +1,20 @@
 ---
-title: Docker容器化部署
-date: 2025-03-05
-categories: [backend, microservices]
-tags: [Docker, 容器化, 部署, DevOps, 微服务]
+date: '2026-04-05'
+author: HK意境
+---
+
+3-05T00:00:00.000Z
+categories:
+  - backend
+  - microservices
+tags:
+  - Docker
+  - 容器化
+  - 部署
+  - DevOps
+  - 微服务
 description: Docker核心概念、镜像构建、容器编排与生产环境最佳实践详解
+author: HK意境
 ---
 
 # Docker容器化部署

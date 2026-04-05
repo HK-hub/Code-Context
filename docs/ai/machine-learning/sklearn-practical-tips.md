@@ -1,9 +1,17 @@
 ---
 title: Scikit-learn实战技巧：高效机器学习开发
-date: 2025-03-05
-categories: [ai, machine-learning]
-tags: [sklearn, 机器学习, Python, 数据科学, 最佳实践]
+date: 2025-03-05T00:00:00.000Z
+categories:
+  - ai
+  - machine-learning
+tags:
+  - sklearn
+  - 机器学习
+  - Python
+  - 数据科学
+  - 最佳实践
 description: 深入探讨sklearn的高级特性和实战技巧，包括Pipeline、自定义转换器、模型持久化等
+author: HK意境
 ---
 
 # Scikit-learn实战技巧：高效机器学习开发

@@ -1,9 +1,17 @@
 ---
 title: Kubernetes编排入门
-date: 2025-03-15
-categories: [backend, microservices]
-tags: [Kubernetes, K8s, 容器编排, 云原生, DevOps]
+date: 2025-03-15T00:00:00.000Z
+categories:
+  - backend
+  - microservices
+tags:
+  - Kubernetes
+  - K8s
+  - 容器编排
+  - 云原生
+  - DevOps
 description: Kubernetes核心概念、资源对象、部署实践与生产环境运维详解
+author: HK意境
 ---
 
 # Kubernetes编排入门

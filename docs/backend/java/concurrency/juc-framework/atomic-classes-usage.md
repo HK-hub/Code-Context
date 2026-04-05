@@ -1,11 +1,12 @@
 ---
 title: Atomic Classes Usage
-date: 2026-04-03
+date: 2026-04-03T00:00:00.000Z
 categories:
   - backend - java - concurrency - juc-framework
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Atomic Classes Usage

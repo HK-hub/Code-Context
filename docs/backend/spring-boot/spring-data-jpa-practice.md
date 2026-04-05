@@ -1,9 +1,17 @@
 ---
 title: Spring Data JPA实战
-date: 2025-03-05
-categories: [backend, spring-boot]
-tags: [Spring Data JPA, Hibernate, 数据访问, ORM, Repository]
+date: 2025-03-05T00:00:00.000Z
+categories:
+  - backend
+  - spring-boot
+tags:
+  - Spring Data JPA
+  - Hibernate
+  - 数据访问
+  - ORM
+  - Repository
 description: Spring Data JPA核心概念、Repository接口、自定义查询、性能优化实践详解
+author: HK意境
 ---
 
 # Spring Data JPA实战

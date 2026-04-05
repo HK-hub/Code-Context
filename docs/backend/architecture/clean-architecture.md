@@ -1,9 +1,17 @@
 ---
 title: 清洁架构理念
-date: 2025-03-01
-categories: [backend, architecture]
-tags: [清洁架构, 依赖规则, 分层架构, Robert Martin, 架构设计]
+date: 2025-03-01T00:00:00.000Z
+categories:
+  - backend
+  - architecture
+tags:
+  - 清洁架构
+  - 依赖规则
+  - 分层架构
+  - Robert Martin
+  - 架构设计
 description: 清洁架构核心原则、依赖规则、层次结构与实践应用详解
+author: HK意境
 ---
 
 # 清洁架构理念

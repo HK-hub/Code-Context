@@ -1,9 +1,18 @@
 ---
 title: 编程语言选择深度分析
-date: 2025-03-25
-categories: [blog, reviews]
-tags: [编程语言, JavaScript, TypeScript, Python, Rust, Go]
+date: 2025-03-25T00:00:00.000Z
+categories:
+  - blog
+  - reviews
+tags:
+  - 编程语言
+  - JavaScript
+  - TypeScript
+  - Python
+  - Rust
+  - Go
 description: 深入分析主流编程语言的特点和适用场景，帮助开发者做出合理的技术选型
+author: HK意境
 ---
 
 # 编程语言选择深度分析

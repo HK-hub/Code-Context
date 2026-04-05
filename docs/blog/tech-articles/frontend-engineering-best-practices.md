@@ -1,9 +1,17 @@
 ---
 title: 前端工程化最佳实践
-date: 2025-01-28
-categories: [blog, tech-articles]
-tags: [前端工程化, 构建工具, 规范, 自动化, 团队协作]
+date: 2025-01-28T00:00:00.000Z
+categories:
+  - blog
+  - tech-articles
+tags:
+  - 前端工程化
+  - 构建工具
+  - 规范
+  - 自动化
+  - 团队协作
 description: 从项目结构、构建配置、代码规范到自动化流程的前端工程化完整实践指南
+author: HK意境
 ---
 
 # 前端工程化最佳实践

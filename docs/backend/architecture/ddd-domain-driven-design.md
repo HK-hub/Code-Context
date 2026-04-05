@@ -1,9 +1,17 @@
 ---
 title: DDD领域驱动设计
-date: 2025-02-18
-categories: [backend, architecture]
-tags: [DDD, 领域驱动设计, 领域模型, 战术设计, 战略设计]
+date: 2025-02-18T00:00:00.000Z
+categories:
+  - backend
+  - architecture
+tags:
+  - DDD
+  - 领域驱动设计
+  - 领域模型
+  - 战术设计
+  - 战略设计
 description: DDD领域驱动设计核心概念、战略设计、战术设计与落地实践详解
+author: HK意境
 ---
 
 # DDD领域驱动设计

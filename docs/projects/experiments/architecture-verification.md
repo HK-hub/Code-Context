@@ -1,9 +1,16 @@
 ---
 title: 架构方案验证方法与实践
-date: 2025-02-22
-categories: [projects, experiments]
-tags: [架构设计, 方案验证, 原型开发, 技术决策]
+date: 2025-02-22T00:00:00.000Z
+categories:
+  - projects
+  - experiments
+tags:
+  - 架构设计
+  - 方案验证
+  - 原型开发
+  - 技术决策
 description: 探讨架构方案验证的系统性方法，包括风险评估、原型设计、验证实施和决策制定的完整流程
+author: HK意境
 ---
 
 # 架构方案验证方法与实践

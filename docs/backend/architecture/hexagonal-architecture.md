@@ -1,9 +1,17 @@
 ---
 title: 六边形架构实践
-date: 2025-02-22
-categories: [backend, architecture]
-tags: [六边形架构, 端口适配器, 架构模式, 解耦, 可测试性]
+date: 2025-02-22T00:00:00.000Z
+categories:
+  - backend
+  - architecture
+tags:
+  - 六边形架构
+  - 端口适配器
+  - 架构模式
+  - 解耦
+  - 可测试性
 description: 六边形架构原理、端口适配器模式与实际项目落地实践详解
+author: HK意境
 ---
 
 # 六边形架构实践

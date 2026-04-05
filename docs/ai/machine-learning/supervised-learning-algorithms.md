@@ -1,9 +1,17 @@
 ---
 title: 监督学习算法详解：从理论到实践
-date: 2025-01-15
-categories: [ai, machine-learning]
-tags: [监督学习, 分类, 回归, 机器学习, sklearn]
+date: 2025-01-15T00:00:00.000Z
+categories:
+  - ai
+  - machine-learning
+tags:
+  - 监督学习
+  - 分类
+  - 回归
+  - 机器学习
+  - sklearn
 description: 深入解析监督学习算法的核心原理，涵盖分类与回归任务，结合sklearn实战代码演示
+author: HK意境
 ---
 
 # 监督学习算法详解：从理论到实践

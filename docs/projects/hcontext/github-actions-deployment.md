@@ -1,9 +1,17 @@
 ---
 title: GitHub Actions部署与CI/CD配置实践
-date: 2025-03-18
-categories: [projects, hcontext]
-tags: [GitHub Actions, CI/CD, Vercel, 部署, 自动化]
+date: 2025-03-18T00:00:00.000Z
+categories:
+  - projects
+  - hcontext
+tags:
+  - GitHub Actions
+  - CI/CD
+  - Vercel
+  - 部署
+  - 自动化
 description: 详细介绍HContext项目的自动化部署流程，包括GitHub Actions配置、Vercel集成、双部署策略和性能优化
+author: HK意境
 ---
 
 # GitHub Actions部署与CI/CD配置实践

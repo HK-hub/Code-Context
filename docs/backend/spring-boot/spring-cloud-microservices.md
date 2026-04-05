@@ -1,9 +1,17 @@
 ---
 title: Spring Cloud微服务入门
-date: 2025-03-18
-categories: [backend, spring-boot]
-tags: [Spring Cloud, 微服务, 服务注册, 配置中心, 服务网关]
+date: 2025-03-18T00:00:00.000Z
+categories:
+  - backend
+  - spring-boot
+tags:
+  - Spring Cloud
+  - 微服务
+  - 服务注册
+  - 配置中心
+  - 服务网关
 description: Spring Cloud核心组件、服务注册发现、配置中心、服务网关实战详解
+author: HK意境
 ---
 
 # Spring Cloud微服务入门

@@ -1,11 +1,12 @@
 ---
 title: Ddd Strategic Design
-date: 2026-04-02
+date: 2026-04-02T00:00:00.000Z
 categories:
   - books - architecture - ddd
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Ddd Strategic Design

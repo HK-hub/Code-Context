@@ -1,11 +1,12 @@
 ---
 title: Git Internal Mechanism
-date: 2026-04-01
+date: 2026-04-01T00:00:00.000Z
 categories:
   - blog - tech-articles - tools - git
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Git Internal Mechanism

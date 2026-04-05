@@ -1,9 +1,17 @@
 ---
 title: CLI命令行工具开发实战指南
-date: 2025-01-28
-categories: [projects, tools]
-tags: [CLI, Node.js, 命令行, 工具开发, npm]
+date: 2025-01-28T00:00:00.000Z
+categories:
+  - projects
+  - tools
+tags:
+  - CLI
+  - Node.js
+  - 命令行
+  - 工具开发
+  - npm
 description: 全面介绍CLI命令行工具的开发流程，包括项目架构、参数处理、交互设计、发布维护等核心环节的实践经验
+author: HK意境
 ---
 
 # CLI命令行工具开发实战指南

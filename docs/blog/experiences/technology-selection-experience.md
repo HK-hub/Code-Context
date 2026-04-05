@@ -1,9 +1,17 @@
 ---
 title: 技术选型的经验与思考
-date: 2025-02-12
-categories: [blog, experiences]
-tags: [技术选型, 项目决策, 团队协作, 架构设计, 风险评估]
+date: 2025-02-12T00:00:00.000Z
+categories:
+  - blog
+  - experiences
+tags:
+  - 技术选型
+  - 项目决策
+  - 团队协作
+  - 架构设计
+  - 风险评估
 description: 分享实际项目中进行技术选型的经验，包括评估方法、决策依据和风险控制策略
+author: HK意境
 ---
 
 # 技术选型的经验与思考

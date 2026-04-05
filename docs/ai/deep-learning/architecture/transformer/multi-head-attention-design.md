@@ -1,11 +1,12 @@
 ---
 title: Multi Head Attention Design
-date: 2026-04-03
+date: 2026-04-03T00:00:00.000Z
 categories:
   - ai - deep-learning - architecture - transformer
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Multi Head Attention Design

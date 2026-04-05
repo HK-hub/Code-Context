@@ -1,9 +1,17 @@
 ---
 title: 神经网络基础入门：从感知机到多层网络
-date: 2025-01-20
-categories: [ai, deep-learning]
-tags: [神经网络, 深度学习, 感知机, 反向传播, PyTorch]
+date: 2025-01-20T00:00:00.000Z
+categories:
+  - ai
+  - deep-learning
+tags:
+  - 神经网络
+  - 深度学习
+  - 感知机
+  - 反向传播
+  - PyTorch
 description: 从零开始理解神经网络的核心原理，涵盖感知机、多层网络、激活函数和反向传播算法
+author: HK意境
 ---
 
 # 神经网络基础入门：从感知机到多层网络

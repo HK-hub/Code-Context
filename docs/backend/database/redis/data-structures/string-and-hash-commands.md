@@ -1,11 +1,12 @@
 ---
 title: String And Hash Commands
-date: 2026-04-01
+date: 2026-04-01T00:00:00.000Z
 categories:
   - backend - database - redis - data-structures
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # String And Hash Commands
@@ -71,5 +72,8 @@ public class Demo {
 - [技术博客](https://example.com/blog)
 
 ---
+
+*最后更新：2026-04-01*
+-
 
 *最后更新：2026-04-01*

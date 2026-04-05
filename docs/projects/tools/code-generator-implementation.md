@@ -1,9 +1,17 @@
 ---
 title: 代码生成器设计与实现深度解析
-date: 2025-02-12
-categories: [projects, tools]
-tags: [代码生成, 模板引擎, 自动化, 开发效率, CLI]
+date: 2025-02-12T00:00:00.000Z
+categories:
+  - projects
+  - tools
+tags:
+  - 代码生成
+  - 模板引擎
+  - 自动化
+  - 开发效率
+  - CLI
 description: 深入探讨代码生成器的架构设计、模板引擎实现、多语言支持和最佳实践，帮助开发者构建高效的代码生成工具
+author: HK意境
 ---
 
 # 代码生成器设计与实现深度解析

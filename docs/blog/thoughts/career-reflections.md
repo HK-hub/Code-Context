@@ -1,9 +1,17 @@
 ---
 title: 技术人的职业思考
-date: 2025-01-18
-categories: [blog, thoughts]
-tags: [职业发展, 技术人生, 规划思考, 职业选择, 成长路径]
+date: 2025-01-18T00:00:00.000Z
+categories:
+  - blog
+  - thoughts
+tags:
+  - 职业发展
+  - 技术人生
+  - 规划思考
+  - 职业选择
+  - 成长路径
 description: 深入思考技术人员的职业发展路径，探讨不同选择的可能性与策略
+author: HK意境
 ---
 
 # 技术人的职业思考

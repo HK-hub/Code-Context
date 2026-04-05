@@ -1,9 +1,18 @@
 ---
 title: 深度学习优化技巧：从训练到调参
-date: 2025-03-25
-categories: [ai, deep-learning]
-tags: [深度学习, 优化技巧, 调参, 正则化, 学习率, PyTorch]
+date: 2025-03-25T00:00:00.000Z
+categories:
+  - ai
+  - deep-learning
+tags:
+  - 深度学习
+  - 优化技巧
+  - 调参
+  - 正则化
+  - 学习率
+  - PyTorch
 description: 系统讲解深度学习模型训练的优化技巧，包括正则化、学习率调度、数据增强和超参数调优
+author: HK意境
 ---
 
 # 深度学习优化技巧：从训练到调参

@@ -1,9 +1,17 @@
 ---
 title: Python数据处理示例与分析实践
-date: 2025-03-12
-categories: [projects, demos]
-tags: [Python, 数据处理, Pandas, 数据分析, 可视化]
+date: 2025-03-12T00:00:00.000Z
+categories:
+  - projects
+  - demos
+tags:
+  - Python
+  - 数据处理
+  - Pandas
+  - 数据分析
+  - 可视化
 description: 通过实际案例展示Python数据处理的完整流程，包括数据清洗、转换、分析和可视化的最佳实践
+author: HK意境
 ---
 
 # Python数据处理示例与分析实践
@@ -284,85 +292,4 @@ def time_series_analysis(df, date_col, value_col, freq='M'):
     
     result = pd.DataFrame({
         f'{value_col}_sum': resampled.sum(),
-        f'{value_col}_mean': resampled.mean(),
-        f'{value_col}_count': resampled.count()
-    })
-    
-    # 计算环比增长率
-    result[f'{value_col}_growth'] = result[f'{value_col}_sum'].pct_change()
-    
-    # 计算移动平均
-    result[f'{value_col}_ma7'] = result[f'{value_col}_sum'].rolling(window=7).mean()
-    result[f'{value_col}_ma30'] = result[f'{value_col}_sum'].rolling(window=30).mean()
-    
-    return result
-
-# 使用示例
-# ts_result = time_series_analysis(df, date_col='order_date', value_col='sales', freq='M')
-```
-
-## 数据可视化
-
-### 基础可视化
-
-```python
-def plot_distribution(df, column, title=None):
-    """绘制数据分布"""
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4))
-    
-    # 直方图
-    axes[0].hist(df[column].dropna(), bins=30, edgecolor='black', alpha=0.7)
-    axes[0].set_xlabel(column)
-    axes[0].set_ylabel('Frequency')
-    axes[0].set_title(f'{title or column} Distribution')
-    
-    # 箱线图
-    axes[1].boxplot(df[column].dropna(), vert=True)
-    axes[1].set_ylabel(column)
-    axes[1].set_title(f'{title or column} Boxplot')
-    
-    plt.tight_layout()
-    plt.show()
-
-def plot_correlation_heatmap(df, figsize=(10, 8)):
-    """绘制相关性热力图"""
-    numeric_cols = df.select_dtypes(include=[np.number]).columns
-    corr = df[numeric_cols].corr()
-    
-    plt.figure(figsize=figsize)
-    sns.heatmap(corr, annot=True, fmt='.2f', cmap='coolwarm', 
-                center=0, square=True, linewidths=0.5)
-    plt.title('Feature Correlation Heatmap')
-    plt.show()
-
-def plot_time_series(df, date_col, value_col, title=None):
-    """绘制时间序列图"""
-    plt.figure(figsize=(12, 6))
-    
-    plt.plot(df[date_col], df[value_col], marker='o', linestyle='-', markersize=3)
-    
-    plt.xlabel('Date')
-    plt.ylabel(value_col)
-    plt.title(title or f'{value_col} over Time')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
-
-# 使用示例
-# plot_distribution(df, 'sales', 'Sales Distribution')
-# plot_correlation_heatmap(df)
-# plot_time_series(ts_result.reset_index(), 'order_date', 'sales_sum', 'Monthly Sales Trend')
-```
-
-## 总结
-
-Python数据处理流程的关键步骤：
-
-1. **数据加载**：支持多种格式，灵活读取
-2. **数据探索**：了解数据特征，发现潜在问题
-3. **数据清洗**：处理缺失值、异常值、重复值
-4. **类型转换**：确保数据类型正确
-5. **分析聚合**：多维度分析，发现规律
-6. **可视化**：直观展示分析结果
-
-通过pandas等工具的合理使用，可以高效完成数据分析任务。
+        f'{value_col}_mean': resampled.mean

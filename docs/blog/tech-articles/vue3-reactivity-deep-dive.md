@@ -1,9 +1,17 @@
 ---
 title: Vue3响应式原理深入理解
-date: 2025-01-15
-categories: [blog, tech-articles]
-tags: [Vue3, 响应式, Proxy, 前端框架, JavaScript]
+date: 2025-01-15T00:00:00.000Z
+categories:
+  - blog
+  - tech-articles
+tags:
+  - Vue3
+  - 响应式
+  - Proxy
+  - 前端框架
+  - JavaScript
 description: 深入剖析Vue3响应式系统的核心原理，理解Proxy代理机制与依赖收集过程
+author: HK意境
 ---
 
 # Vue3响应式原理深入理解

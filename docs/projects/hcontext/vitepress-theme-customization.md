@@ -1,9 +1,17 @@
 ---
 title: VitePress主题定制开发实践
-date: 2025-02-08
-categories: [projects, hcontext]
-tags: [VitePress, Vue3, 主题开发, 组件设计, CSS架构]
+date: 2025-02-08T00:00:00.000Z
+categories:
+  - projects
+  - hcontext
+tags:
+  - VitePress
+  - Vue3
+  - 主题开发
+  - 组件设计
+  - CSS架构
 description: 详解VitePress主题定制开发流程，包括布局系统、组件设计、样式架构和最佳实践
+author: HK意境
 ---
 
 # VitePress主题定制开发实践

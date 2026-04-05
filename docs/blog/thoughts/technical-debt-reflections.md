@@ -1,9 +1,17 @@
 ---
 title: 技术债务的处理之道
-date: 2025-03-28
-categories: [blog, thoughts]
-tags: [技术债务, 代码质量, 重构, 项目管理, 软件工程]
+date: 2025-03-28T00:00:00.000Z
+categories:
+  - blog
+  - thoughts
+tags:
+  - 技术债务
+  - 代码质量
+  - 重构
+  - 项目管理
+  - 软件工程
 description: 深入思考技术债务的产生原因、影响和处理策略，建立健康的代码管理观念
+author: HK意境
 ---
 
 # 技术债务的处理之道

@@ -1,9 +1,17 @@
 ---
 title: Spring Security安全配置
-date: 2025-02-15
-categories: [backend, spring-boot]
-tags: [Spring Security, 认证, 授权, JWT, OAuth2]
+date: 2025-02-15T00:00:00.000Z
+categories:
+  - backend
+  - spring-boot
+tags:
+  - Spring Security
+  - 认证
+  - 授权
+  - JWT
+  - OAuth2
 description: Spring Security核心原理、认证授权配置、JWT集成与安全最佳实践详解
+author: HK意境
 ---
 
 # Spring Security安全配置

@@ -1,9 +1,17 @@
 ---
 title: 文本预处理技术：从原始文本到结构化数据
-date: 2025-01-25
-categories: [ai, nlp]
-tags: [文本预处理, NLP, 分词, 词向量, Python]
+date: 2025-01-25T00:00:00.000Z
+categories:
+  - ai
+  - nlp
+tags:
+  - 文本预处理
+  - NLP
+  - 分词
+  - 词向量
+  - Python
 description: 全面讲解自然语言处理中的文本预处理技术，包括分词、清洗、标准化和特征提取方法
+author: HK意境
 ---
 
 # 文本预处理技术：从原始文本到结构化数据

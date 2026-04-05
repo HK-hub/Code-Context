@@ -1,11 +1,12 @@
 ---
 title: Text Generation Patterns
-date: 2026-04-01
+date: 2026-04-01T00:00:00.000Z
 categories:
   - ai - llm - gpt - applications
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Text Generation Patterns

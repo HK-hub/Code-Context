@@ -1,9 +1,17 @@
 ---
 title: 前端开发工具推荐精选
-date: 2025-03-15
-categories: [blog, reviews]
-tags: [开发工具, VS Code, 效率工具, 调试工具, 工作流]
+date: 2025-03-15T00:00:00.000Z
+categories:
+  - blog
+  - reviews
+tags:
+  - 开发工具
+  - VS Code
+  - 效率工具
+  - 调试工具
+  - 工作流
 description: 精选推荐前端开发常用工具，涵盖编辑器、调试、构建、部署等环节
+author: HK意境
 ---
 
 # 前端开发工具推荐精选

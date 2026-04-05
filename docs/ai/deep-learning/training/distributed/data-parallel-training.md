@@ -1,11 +1,12 @@
 ---
 title: Data Parallel Training
-date: 2026-04-01
+date: 2026-04-01T00:00:00.000Z
 categories:
   - ai - deep-learning - training - distributed
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Data Parallel Training

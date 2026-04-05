@@ -1,9 +1,17 @@
 ---
 title: 机器学习数学基础：从概率到优化
-date: 2025-03-18
-categories: [ai, machine-learning]
-tags: [数学基础, 概率论, 线性代数, 优化理论, 机器学习]
+date: 2025-03-18T00:00:00.000Z
+categories:
+  - ai
+  - machine-learning
+tags:
+  - 数学基础
+  - 概率论
+  - 线性代数
+  - 优化理论
+  - 机器学习
 description: 系统讲解机器学习所需的数学基础，包括概率论、线性代数、信息论和优化理论
+author: HK意境
 ---
 
 # 机器学习数学基础：从概率到优化

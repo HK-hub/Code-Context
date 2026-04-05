@@ -1,9 +1,17 @@
 ---
 title: Docker入门实践指南
-date: 2025-03-05
-categories: [blog, tutorials]
-tags: [Docker, 容器化, DevOps, 后端运维, 部署]
+date: 2025-03-05T00:00:00.000Z
+categories:
+  - blog
+  - tutorials
+tags:
+  - Docker
+  - 容器化
+  - DevOps
+  - 后端运维
+  - 部署
 description: 从基础概念到实际应用，详解Docker容器化技术的入门实践，助你快速掌握容器部署技能
+author: HK意境
 ---
 
 # Docker入门实践指南

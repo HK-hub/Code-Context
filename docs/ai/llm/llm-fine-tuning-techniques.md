@@ -1,9 +1,17 @@
 ---
 title: 大模型微调技术：从全参数到高效微调
-date: 2025-03-05
-categories: [ai, llm]
-tags: [模型微调, LoRA, PEFT, 指令微调, 大语言模型]
+date: 2025-03-05T00:00:00.000Z
+categories:
+  - ai
+  - llm
+tags:
+  - 模型微调
+  - LoRA
+  - PEFT
+  - 指令微调
+  - 大语言模型
 description: 全面讲解大语言模型微调技术，包括全参数微调、LoRA、QLoRA等高效微调方法
+author: HK意境
 ---
 
 # 大模型微调技术：从全参数到高效微调

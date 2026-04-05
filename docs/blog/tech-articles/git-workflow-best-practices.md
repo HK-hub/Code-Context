@@ -1,9 +1,17 @@
 ---
 title: Git工作流规范与最佳实践
-date: 2025-02-20
-categories: [blog, tech-articles]
-tags: [Git, 版本控制, 团队协作, 工作流, DevOps]
+date: 2025-02-20T00:00:00.000Z
+categories:
+  - blog
+  - tech-articles
+tags:
+  - Git
+  - 版本控制
+  - 团队协作
+  - 工作流
+  - DevOps
 description: 详解Git分支管理策略、提交规范、协作流程，帮助团队建立高效的版本控制体系
+author: HK意境
 ---
 
 # Git工作流规范与最佳实践

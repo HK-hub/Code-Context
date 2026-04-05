@@ -1,9 +1,18 @@
 ---
 title: RNN序列建模：循环神经网络原理与应用
-date: 2025-03-10
-categories: [ai, deep-learning]
-tags: [RNN, LSTM, GRU, 序列建模, 深度学习, NLP]
+date: 2025-03-10T00:00:00.000Z
+categories:
+  - ai
+  - deep-learning
+tags:
+  - RNN
+  - LSTM
+  - GRU
+  - 序列建模
+  - 深度学习
+  - NLP
 description: 深入理解循环神经网络的核心原理，包括RNN、LSTM、GRU架构及其在序列数据处理中的应用
+author: HK意境
 ---
 
 # RNN序列建模：循环神经网络原理与应用

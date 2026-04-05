@@ -1,9 +1,17 @@
 ---
 title: TypeScript高级类型技巧
-date: 2025-02-08
-categories: [blog, tech-articles]
-tags: [TypeScript, 类型系统, 泛型, 类型体操, 前端工程化]
+date: 2025-02-08T00:00:00.000Z
+categories:
+  - blog
+  - tech-articles
+tags:
+  - TypeScript
+  - 类型系统
+  - 泛型
+  - 类型体操
+  - 前端工程化
 description: 深入探讨TypeScript高级类型技巧，包括条件类型、映射类型、模板字面量类型等进阶特性
+author: HK意境
 ---
 
 # TypeScript高级类型技巧

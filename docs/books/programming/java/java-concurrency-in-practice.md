@@ -1,11 +1,12 @@
 ---
 title: Java Concurrency In Practice
-date: 2026-04-02
+date: 2026-04-02T00:00:00.000Z
 categories:
   - books - programming - java
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Java Concurrency In Practice

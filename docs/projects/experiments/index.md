@@ -1,5 +1,7 @@
 ---
 title: Experiments 实验项目
+date: '2026-04-05'
+author: HK意境
 ---
 
 # Experiments 实验项目

@@ -1,11 +1,12 @@
 ---
 title: Lstm Vs Gru
-date: 2026-04-01
+date: 2026-04-01T00:00:00.000Z
 categories:
   - ai - deep-learning - architecture - rnn
 tags:
   - 技术文章
   - 学习笔记
+author: HK意境
 ---
 
 # Lstm Vs Gru

@@ -1,9 +1,17 @@
 ---
 title: MySQL索引优化实战
-date: 2025-01-25
-categories: [backend, database]
-tags: [MySQL, 索引优化, 查询优化, 数据库性能, SQL调优]
+date: 2025-01-25T00:00:00.000Z
+categories:
+  - backend
+  - database
+tags:
+  - MySQL
+  - 索引优化
+  - 查询优化
+  - 数据库性能
+  - SQL调优
 description: MySQL索引原理、类型选择、优化策略与实战案例分析，提升数据库查询性能
+author: HK意境
 ---
 
 # MySQL索引优化实战

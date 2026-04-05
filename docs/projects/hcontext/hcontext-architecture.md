@@ -1,9 +1,17 @@
 ---
 title: HContext项目架构设计与实现
-date: 2025-01-15
-categories: [projects, hcontext]
-tags: [VitePress, 架构设计, Vue3, TypeScript, 静态站点]
+date: 2025-01-15T00:00:00.000Z
+categories:
+  - projects
+  - hcontext
+tags:
+  - VitePress
+  - 架构设计
+  - Vue3
+  - TypeScript
+  - 静态站点
 description: 深入探讨HContext项目的整体架构设计，包括技术选型、模块划分、扩展性设计和性能优化策略
+author: HK意境
 ---
 
 # HContext项目架构设计与实现

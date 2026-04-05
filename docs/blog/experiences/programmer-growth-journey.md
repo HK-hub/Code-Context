@@ -1,9 +1,17 @@
 ---
 title: 程序员成长之路的心路历程
-date: 2025-01-10
-categories: [blog, experiences]
-tags: [成长, 职业发展, 程序员, 学习方法, 心态调整]
+date: 2025-01-10T00:00:00.000Z
+categories:
+  - blog
+  - experiences
+tags:
+  - 成长
+  - 职业发展
+  - 程序员
+  - 学习方法
+  - 心态调整
 description: 从新手到资深开发者的成长感悟，分享技术成长中的关键转折点和学习心得
+author: HK意境
 ---
 
 # 程序员成长之路的心路历程

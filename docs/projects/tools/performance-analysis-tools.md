@@ -1,9 +1,17 @@
 ---
 title: 性能分析工具实践与应用
-date: 2025-03-22
-categories: [projects, tools]
-tags: [性能分析, Lighthouse, Chrome DevTools, 性能优化, 监控]
+date: 2025-03-22T00:00:00.000Z
+categories:
+  - projects
+  - tools
+tags:
+  - 性能分析
+  - Lighthouse
+  - Chrome DevTools
+  - 性能优化
+  - 监控
 description: 深入介绍前端性能分析工具的使用方法和实践技巧，包括Chrome DevTools、Lighthouse、WebPageTest等工具的深度应用
+author: HK意境
 ---
 
 # 性能分析工具实践与应用

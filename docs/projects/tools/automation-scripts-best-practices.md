@@ -1,9 +1,17 @@
 ---
 title: 自动化脚本编写与最佳实践指南
-date: 2025-02-25
-categories: [projects, tools]
-tags: [自动化, Shell, Node.js, 脚本, 批处理]
+date: 2025-02-25T00:00:00.000Z
+categories:
+  - projects
+  - tools
+tags:
+  - 自动化
+  - Shell
+  - Node.js
+  - 脚本
+  - 批处理
 description: 全面介绍自动化脚本的编写技巧，包括Shell脚本、Node.js脚本、批处理任务和CI/CD自动化实践
+author: HK意境
 ---
 
 # 自动化脚本编写与最佳实践指南

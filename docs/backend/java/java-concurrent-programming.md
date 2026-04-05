@@ -1,9 +1,17 @@
 ---
 title: Java并发编程深入理解
-date: 2025-01-15
-categories: [backend, java]
-tags: [Java, 并发编程, 多线程, JUC, 线程安全]
+date: 2025-01-15T00:00:00.000Z
+categories:
+  - backend
+  - java
+tags:
+  - Java
+  - 并发编程
+  - 多线程
+  - JUC
+  - 线程安全
 description: 深入探讨Java并发编程的核心概念、线程安全机制、JUC工具类及最佳实践
+author: HK意境
 ---
 
 # Java并发编程深入理解

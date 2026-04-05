@@ -1,9 +1,17 @@
 ---
 title: 图像分割技术：语义分割与实例分割
-date: 2025-03-08
-categories: [ai, computer-vision]
-tags: [图像分割, 语义分割, 实例分割, U-Net, Mask R-CNN]
+date: 2025-03-08T00:00:00.000Z
+categories:
+  - ai
+  - computer-vision
+tags:
+  - 图像分割
+  - 语义分割
+  - 实例分割
+  - U-Net
+  - Mask R-CNN
 description: 深入讲解图像分割的核心技术，包括语义分割和实例分割的主流模型与实现方法
+author: HK意境
 ---
 
 # 图像分割技术：语义分割与实例分割

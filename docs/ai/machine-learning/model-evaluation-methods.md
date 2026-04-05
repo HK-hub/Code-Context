@@ -1,9 +1,17 @@
 ---
 title: 模型评估方法：从指标到验证策略
-date: 2025-02-22
-categories: [ai, machine-learning]
-tags: [模型评估, 交叉验证, 性能指标, sklearn, 机器学习]
+date: 2025-02-22T00:00:00.000Z
+categories:
+  - ai
+  - machine-learning
+tags:
+  - 模型评估
+  - 交叉验证
+  - 性能指标
+  - sklearn
+  - 机器学习
 description: 全面讲解机器学习模型评估的核心方法，包括分类和回归指标、交叉验证策略、模型选择技巧
+author: HK意境
 ---
 
 # 模型评估方法：从指标到验证策略

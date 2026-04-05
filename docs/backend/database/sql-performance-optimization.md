@@ -1,9 +1,17 @@
 ---
 title: SQL性能优化技巧
-date: 2025-03-22
-categories: [backend, database]
-tags: [SQL, 性能优化, 查询优化, 执行计划, 数据库调优]
+date: 2025-03-22T00:00:00.000Z
+categories:
+  - backend
+  - database
+tags:
+  - SQL
+  - 性能优化
+  - 查询优化
+  - 执行计划
+  - 数据库调优
 description: SQL查询优化技巧、执行计划分析、索引使用策略与数据库性能调优实践
+author: HK意境
 ---
 
 # SQL性能优化技巧
