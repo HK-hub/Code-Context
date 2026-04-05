@@ -36,6 +36,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^14.2.1",
+    "html2pdf.js": "^0.14.0",
+    "markdown-it": "^14.1.1",
     "vitepress-plugin-image-viewer": "^1.1.6",
     "vitepress-plugin-mermaid": "^2.0.17"
   }
