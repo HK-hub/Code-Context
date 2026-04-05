@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <!-- 主渐变：紫-蓝-靛，代表技术与意境的融合 -->
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="40%" style="stop-color:#6366f1"/>
+      <stop offset="70%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+
+    <!-- 意境流光渐变 -->
+    <linearGradient id="flowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c4b5fd;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0.4"/>
+    </linearGradient>
+
+    <!-- 柔光效果 -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- 书法笔触效果 -->
+    <filter id="inkEffect">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- 背景意境圆 -->
+  <circle cx="200" cy="200" r="180" fill="url(#heroGrad)" opacity="0.15"/>
+  <circle cx="200" cy="200" r="140" fill="url(#heroGrad)" opacity="0.25"/>
+
+  <!-- 意境流动曲线 - 书法笔意 -->
+  <g fill="none" stroke="url(#flowGrad)" stroke-linecap="round" opacity="0.7">
+    <!-- 上扬的气韵 -->
+    <path d="M60 320 Q100 280, 140 300 T220 260 T340 220" stroke-width="3"/>
+    <!-- 回转的意境 -->
+    <path d="M80 280 Q120 240, 180 260 T260 200 T360 160" stroke-width="2"/>
+    <!-- 轻盈的点睛 -->
+    <path d="M100 240 Q150 200, 200 220 T300 180" stroke-width="1.5"/>
+  </g>
+
+  <!-- 核心符号：C（Context）与代码括号的融合 -->
+  <g filter="url(#softGlow)">
+    <!-- 左侧代码括号 < -->
+    <path d="M100 140 L70 200 L100 260"
+          fill="none" stroke="#7c3aed" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Context之C - 融合书法笔意 -->
+    <path d="M200 120
+             Q150 120, 130 160
+             Q110 200, 130 240
+             Q150 280, 200 280"
+          fill="none" stroke="url(#heroGrad)" stroke-width="10" stroke-linecap="round"
+          filter="url(#inkEffect)"/>
+
+    <!-- C内部：代码斜杠 / 代表编程 -->
+    <line x1="175" y1="140" x2="140" y2="260"
+          stroke="#6366f1" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- 右侧代码括号 > -->
+    <path d="M300 140 L330 200 L300 260"
+          fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- 连接点 - 代表技术交汇 -->
+    <circle cx="200" cy="200" r="8" fill="#a78bfa" opacity="0.9"/>
+    <circle cx="200" cy="200" r="4" fill="white" opacity="0.8"/>
+  </g>
+
+  <!-- 意境点缀：如墨点飞溅 -->
+  <g fill="#7c3aed" opacity="0.6">
+    <circle cx="85" cy="180" r="3"/>
+    <circle cx="315" cy="180" r="3"/>
+    <circle cx="90" cy="220" r="2"/>
+    <circle cx="310" cy="220" r="2"/>
+    <circle cx="160" cy="160" r="2"/>
+    <circle cx="240" cy="160" r="2"/>
+  </g>
+
+  <!-- 底部意境波浪 - 水墨感 -->
+  <path d="M40 340 Q100 320, 160 340 T280 320 T360 340"
+        fill="none" stroke="url(#flowGrad)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- 顶部星光 - 代表灵感 -->
+  <g fill="#c4b5fd" opacity="0.7">
+    <polygon points="200,60 204,70 214,70 206,76 210,86 200,80 190,86 194,76 186,70 196,70" transform="scale(0.8) translate(50,30)"/>
+  </g>
+</svg>
