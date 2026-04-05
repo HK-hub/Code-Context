@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, nextTick, watch } from 'vue'
 import { useRoute, useRouter } from 'vitepress'
 import { Icon } from '@iconify/vue'
 import { data as posts } from '../../data/posts.data'
@@ -36,32 +36,75 @@ const selectedTag = ref<string | null>(null)
 const pageSize = 20
 const currentPage = ref(1)
 
-// Expand/collapse state for filters (default: collapsed, show 3 rows)
+// Expand/collapse state
 const categoriesExpanded = ref(false)
 const tagsExpanded = ref(false)
 
-// Calculate items per row based on button width (~80px average + 8px gap)
-// 3 rows ≈ items that fit in container width / button width * 3
-// For 900px container, filter-options ≈ 800px, each btn ≈ 80px, so ~10 per row, 30 items for 3 rows
-const maxVisibleItems = 30 // approximately 3 rows
+// Refs for measuring
+const categoriesButtonsRef = ref<HTMLElement | null>(null)
+const tagsButtonsRef = ref<HTMLElement | null>(null)
 
-// Visible categories/tags
-const visibleCategories = computed(() => {
-  if (categoriesExpanded.value || allCategories.value.length <= maxVisibleItems) {
-    return allCategories.value
-  }
-  return allCategories.value.slice(0, maxVisibleItems)
-})
+// Number of items to show (calculated based on 3 rows)
+const visibleCategoriesCount = ref(Infinity)
+const visibleTagsCount = ref(Infinity)
 
-const visibleTags = computed(() => {
-  if (tagsExpanded.value || allTags.value.length <= maxVisibleItems) {
-    return allTags.value
-  }
-  return allTags.value.slice(0, maxVisibleItems)
-})
+// Max rows to show
+const MAX_ROWS = 3
 
-const hasMoreCategories = computed(() => allCategories.value.length > maxVisibleItems)
-const hasMoreTags = computed(() => allTags.value.length > maxVisibleItems)
+// Calculate visible items based on element positions
+const calculateVisibleItems = (
+  containerRef: HTMLElement | null,
+  setCount: (count: number) => void
+) => {
+  if (!containerRef) return
+
+  const buttons = containerRef.querySelectorAll('.filter-btn')
+  if (buttons.length === 0) return
+
+  const firstBtn = buttons[0] as HTMLElement
+  const btnHeight = firstBtn.offsetHeight
+  const containerWidth = containerRef.offsetWidth
+
+  // Get gap from computed style
+  const style = getComputedStyle(containerRef)
+  const gap = parseFloat(style.gap) || 8
+
+  // Calculate max allowed Y position (3 rows)
+  const maxY = btnHeight * MAX_ROWS + gap * (MAX_ROWS - 1)
+
+  let lastVisibleIndex = buttons.length
+  let hasOverflow = false
+
+  buttons.forEach((btn, index) => {
+    const el = btn as HTMLElement
+    const rect = el.getBoundingClientRect()
+    const containerRect = containerRef.getBoundingClientRect()
+    const relativeTop = rect.top - containerRect.top
+
+    // If button starts beyond max rows, mark as overflow
+    if (relativeTop >= maxY) {
+      if (lastVisibleIndex === buttons.length) {
+        lastVisibleIndex = index
+        hasOverflow = true
+      }
+    }
+  })
+
+  // If expanded, show all; otherwise show only items that fit
+  setCount(hasOverflow ? lastVisibleIndex : Infinity)
+}
+
+// Recalculate on mount and resize
+const recalculateAll = () => {
+  nextTick(() => {
+    calculateVisibleItems(categoriesButtonsRef.value, (count) => {
+      visibleCategoriesCount.value = count
+    })
+    calculateVisibleItems(tagsButtonsRef.value, (count) => {
+      visibleTagsCount.value = count
+    })
+  })
+}
 
 // Initialize from URL params
 onMounted(() => {
@@ -74,7 +117,34 @@ onMounted(() => {
   if (tag && allTags.value.includes(tag)) {
     selectedTag.value = tag
   }
+
+  // Calculate visible items
+  recalculateAll()
+
+  // Recalculate on window resize
+  window.addEventListener('resize', recalculateAll)
 })
+
+// Re-calculate when categories/tags change
+watch([allCategories, allTags], recalculateAll)
+
+// Visible categories/tags
+const visibleCategories = computed(() => {
+  if (categoriesExpanded.value || visibleCategoriesCount.value === Infinity) {
+    return allCategories.value
+  }
+  return allCategories.value.slice(0, visibleCategoriesCount.value)
+})
+
+const visibleTags = computed(() => {
+  if (tagsExpanded.value || visibleTagsCount.value === Infinity) {
+    return allTags.value
+  }
+  return allTags.value.slice(0, visibleTagsCount.value)
+})
+
+const hasMoreCategories = computed(() => visibleCategoriesCount.value !== Infinity)
+const hasMoreTags = computed(() => visibleTagsCount.value !== Infinity)
 
 // Filtered posts
 const filteredPosts = computed(() => {
@@ -153,28 +223,38 @@ const formatDate = (dateStr: string) => {
         <Icon icon="carbon:folder" />
         <span>分类</span>
       </div>
-      <div class="filter-options">
+      <div class="filter-content">
+        <div ref="categoriesButtonsRef" class="filter-options">
+          <button
+            :class="['filter-btn', { active: !selectedCategory }]"
+            @click="selectCategory(null)"
+          >
+            全部
+          </button>
+          <button
+            v-for="cat in visibleCategories"
+            :key="cat"
+            :class="['filter-btn', { active: selectedCategory === cat }]"
+            @click="selectCategory(cat)"
+          >
+            {{ cat }}
+          </button>
+        </div>
         <button
-          :class="['filter-btn', { active: !selectedCategory }]"
-          @click="selectCategory(null)"
-        >
-          全部
-        </button>
-        <button
-          v-for="cat in visibleCategories"
-          :key="cat"
-          :class="['filter-btn', { active: selectedCategory === cat }]"
-          @click="selectCategory(cat)"
-        >
-          {{ cat }}
-        </button>
-        <button
-          v-if="hasMoreCategories"
+          v-if="hasMoreCategories && !categoriesExpanded"
           class="expand-btn"
           @click="toggleCategories"
         >
-          {{ categoriesExpanded ? '收起' : `展开 (${allCategories.length - maxVisibleItems})` }}
-          <Icon :icon="categoriesExpanded ? 'carbon:chevron-up' : 'carbon:chevron-down'" />
+          <Icon icon="carbon:chevron-down" />
+          展开更多 ({{ allCategories.length - visibleCategories.length }})
+        </button>
+        <button
+          v-if="categoriesExpanded"
+          class="expand-btn"
+          @click="toggleCategories"
+        >
+          <Icon icon="carbon:chevron-up" />
+          收起
         </button>
       </div>
     </div>
@@ -185,28 +265,38 @@ const formatDate = (dateStr: string) => {
         <Icon icon="carbon:tag" />
         <span>标签</span>
       </div>
-      <div class="filter-options">
+      <div class="filter-content">
+        <div ref="tagsButtonsRef" class="filter-options">
+          <button
+            :class="['filter-btn tag-btn', { active: !selectedTag }]"
+            @click="selectTag(null)"
+          >
+            全部
+          </button>
+          <button
+            v-for="tag in visibleTags"
+            :key="tag"
+            :class="['filter-btn tag-btn', { active: selectedTag === tag }]"
+            @click="selectTag(tag)"
+          >
+            {{ tag }}
+          </button>
+        </div>
         <button
-          :class="['filter-btn tag-btn', { active: !selectedTag }]"
-          @click="selectTag(null)"
-        >
-          全部
-        </button>
-        <button
-          v-for="tag in visibleTags"
-          :key="tag"
-          :class="['filter-btn tag-btn', { active: selectedTag === tag }]"
-          @click="selectTag(tag)"
-        >
-          {{ tag }}
-        </button>
-        <button
-          v-if="hasMoreTags"
+          v-if="hasMoreTags && !tagsExpanded"
           class="expand-btn"
           @click="toggleTags"
         >
-          {{ tagsExpanded ? '收起' : `展开 (${allTags.length - maxVisibleItems})` }}
-          <Icon :icon="tagsExpanded ? 'carbon:chevron-up' : 'carbon:chevron-down'" />
+          <Icon icon="carbon:chevron-down" />
+          展开更多 ({{ allTags.length - visibleTags.length }})
+        </button>
+        <button
+          v-if="tagsExpanded"
+          class="expand-btn"
+          @click="toggleTags"
+        >
+          <Icon icon="carbon:chevron-up" />
+          收起
         </button>
       </div>
     </div>
@@ -303,11 +393,17 @@ h1 {
   padding-top: 0.25rem;
 }
 
+.filter-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .filter-options {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  flex: 1;
 }
 
 .filter-btn {
@@ -319,6 +415,7 @@ h1 {
   font-size: 0.875rem;
   color: var(--vp-c-text-2);
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .filter-btn:hover {
@@ -350,6 +447,7 @@ h1 {
   align-items: center;
   gap: 0.25rem;
   transition: all 0.2s;
+  align-self: flex-start;
 }
 
 .expand-btn:hover {
