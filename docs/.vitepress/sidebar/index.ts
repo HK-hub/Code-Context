@@ -43,6 +43,186 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         "collapsed": true,
         "items": [
           {
+            "text": "architecture",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "cnn",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Convolution Layer Design",
+                    "link": "deep-learning/architecture/cnn/convolution-layer-design"
+                  },
+                  {
+                    "text": "Pooling Strategies",
+                    "link": "deep-learning/architecture/cnn/pooling-strategies"
+                  },
+                  {
+                    "text": "Residual Network Principles",
+                    "link": "deep-learning/architecture/cnn/residual-network-principles"
+                  }
+                ]
+              },
+              {
+                "text": "rnn",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Attention Mechanism",
+                    "link": "deep-learning/architecture/rnn/attention-mechanism"
+                  },
+                  {
+                    "text": "Lstm Vs Gru",
+                    "link": "deep-learning/architecture/rnn/lstm-vs-gru"
+                  },
+                  {
+                    "text": "Sequence To Sequence",
+                    "link": "deep-learning/architecture/rnn/sequence-to-sequence"
+                  }
+                ]
+              },
+              {
+                "text": "transformer",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Multi Head Attention Design",
+                    "link": "deep-learning/architecture/transformer/multi-head-attention-design"
+                  },
+                  {
+                    "text": "Position Encoding Methods",
+                    "link": "deep-learning/architecture/transformer/position-encoding-methods"
+                  },
+                  {
+                    "text": "Self Attention Mechanism",
+                    "link": "deep-learning/architecture/transformer/self-attention-mechanism"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "pytorch",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "basics",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Autograd Mechanism",
+                    "link": "deep-learning/pytorch/basics/autograd-mechanism"
+                  },
+                  {
+                    "text": "Model Construction Patterns",
+                    "link": "deep-learning/pytorch/basics/model-construction-patterns"
+                  },
+                  {
+                    "text": "Tensor Operations Guide",
+                    "link": "deep-learning/pytorch/basics/tensor-operations-guide"
+                  }
+                ]
+              },
+              {
+                "text": "deployment",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Mobile Deployment Tips",
+                    "link": "deep-learning/pytorch/deployment/mobile-deployment-tips"
+                  },
+                  {
+                    "text": "Model Export Onnx",
+                    "link": "deep-learning/pytorch/deployment/model-export-onnx"
+                  },
+                  {
+                    "text": "Torchserve Deployment",
+                    "link": "deep-learning/pytorch/deployment/torchserve-deployment"
+                  }
+                ]
+              },
+              {
+                "text": "training",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Loss Function Selection",
+                    "link": "deep-learning/pytorch/training/loss-function-selection"
+                  },
+                  {
+                    "text": "Optimizer Algorithms",
+                    "link": "deep-learning/pytorch/training/optimizer-algorithms"
+                  },
+                  {
+                    "text": "Training Loop Optimization",
+                    "link": "deep-learning/pytorch/training/training-loop-optimization"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "training",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "distributed",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Data Parallel Training",
+                    "link": "deep-learning/training/distributed/data-parallel-training"
+                  },
+                  {
+                    "text": "Mixed Precision Training",
+                    "link": "deep-learning/training/distributed/mixed-precision-training"
+                  },
+                  {
+                    "text": "Model Parallel Training",
+                    "link": "deep-learning/training/distributed/model-parallel-training"
+                  }
+                ]
+              },
+              {
+                "text": "optimization",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Batch Normalization",
+                    "link": "deep-learning/training/optimization/batch-normalization"
+                  },
+                  {
+                    "text": "Gradient Descent Variants",
+                    "link": "deep-learning/training/optimization/gradient-descent-variants"
+                  },
+                  {
+                    "text": "Learning Rate Scheduling",
+                    "link": "deep-learning/training/optimization/learning-rate-scheduling"
+                  }
+                ]
+              },
+              {
+                "text": "regularization",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Dropout Techniques",
+                    "link": "deep-learning/training/regularization/dropout-techniques"
+                  },
+                  {
+                    "text": "Early Stopping Strategies",
+                    "link": "deep-learning/training/regularization/early-stopping-strategies"
+                  },
+                  {
+                    "text": "Weight Decay Methods",
+                    "link": "deep-learning/training/regularization/weight-decay-methods"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "text": "CNN架构设计：卷积神经网络原理与实战",
             "link": "deep-learning/cnn-architecture-design"
           },
@@ -68,6 +248,186 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         "text": "llm",
         "collapsed": true,
         "items": [
+          {
+            "text": "gpt",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "applications",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Chatbot Construction",
+                    "link": "llm/gpt/applications/chatbot-construction"
+                  },
+                  {
+                    "text": "Code Assistant Development",
+                    "link": "llm/gpt/applications/code-assistant-development"
+                  },
+                  {
+                    "text": "Text Generation Patterns",
+                    "link": "llm/gpt/applications/text-generation-patterns"
+                  }
+                ]
+              },
+              {
+                "text": "architecture",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Context Window Mechanism",
+                    "link": "llm/gpt/architecture/context-window-mechanism"
+                  },
+                  {
+                    "text": "Decoder Only Transformer",
+                    "link": "llm/gpt/architecture/decoder-only-transformer"
+                  },
+                  {
+                    "text": "Gpt Model Evolution",
+                    "link": "llm/gpt/architecture/gpt-model-evolution"
+                  }
+                ]
+              },
+              {
+                "text": "training",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Fine Tuning Methods",
+                    "link": "llm/gpt/training/fine-tuning-methods"
+                  },
+                  {
+                    "text": "Pre Training Process",
+                    "link": "llm/gpt/training/pre-training-process"
+                  },
+                  {
+                    "text": "Rlhf Alignment",
+                    "link": "llm/gpt/training/rlhf-alignment"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "prompt",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "best practices",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Prompt Evaluation Metrics",
+                    "link": "llm/prompt/best-practices/prompt-evaluation-metrics"
+                  },
+                  {
+                    "text": "Prompt Security Defense",
+                    "link": "llm/prompt/best-practices/prompt-security-defense"
+                  },
+                  {
+                    "text": "Prompt Version Management",
+                    "link": "llm/prompt/best-practices/prompt-version-management"
+                  }
+                ]
+              },
+              {
+                "text": "engineering",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Multi Turn Conversation",
+                    "link": "llm/prompt/engineering/multi-turn-conversation"
+                  },
+                  {
+                    "text": "Prompt Template Design",
+                    "link": "llm/prompt/engineering/prompt-template-design"
+                  },
+                  {
+                    "text": "Structured Output Prompting",
+                    "link": "llm/prompt/engineering/structured-output-prompting"
+                  }
+                ]
+              },
+              {
+                "text": "techniques",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Chain Of Thought",
+                    "link": "llm/prompt/techniques/chain-of-thought"
+                  },
+                  {
+                    "text": "Few Shot Prompting",
+                    "link": "llm/prompt/techniques/few-shot-prompting"
+                  },
+                  {
+                    "text": "Zero Shot Prompting",
+                    "link": "llm/prompt/techniques/zero-shot-prompting"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "rag",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "generation",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Answer Synthesis Patterns",
+                    "link": "llm/rag/generation/answer-synthesis-patterns"
+                  },
+                  {
+                    "text": "Context Integration Methods",
+                    "link": "llm/rag/generation/context-integration-methods"
+                  },
+                  {
+                    "text": "Multi Source Fusion",
+                    "link": "llm/rag/generation/multi-source-fusion"
+                  }
+                ]
+              },
+              {
+                "text": "optimization",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Chunk Strategies",
+                    "link": "llm/rag/optimization/chunk-strategies"
+                  },
+                  {
+                    "text": "Knowledge Graph Integration",
+                    "link": "llm/rag/optimization/knowledge-graph-integration"
+                  },
+                  {
+                    "text": "Reranking Techniques",
+                    "link": "llm/rag/optimization/reranking-techniques"
+                  }
+                ]
+              },
+              {
+                "text": "retrieval",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Hybrid Retrieval Strategies",
+                    "link": "llm/rag/retrieval/hybrid-retrieval-strategies"
+                  },
+                  {
+                    "text": "Similarity Search Algorithms",
+                    "link": "llm/rag/retrieval/similarity-search-algorithms"
+                  },
+                  {
+                    "text": "Vector Embedding Basics",
+                    "link": "llm/rag/retrieval/vector-embedding-basics"
+                  }
+                ]
+              }
+            ]
+          },
           {
             "text": "GPT模型原理深度解析",
             "link": "llm/gpt-model-principles"
@@ -178,6 +538,186 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         "collapsed": true,
         "items": [
           {
+            "text": "mysql",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "index optimization",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Btree Index Principles",
+                    "link": "database/mysql/-optimization/btree-index-principles"
+                  },
+                  {
+                    "text": "Composite Index Design",
+                    "link": "database/mysql/-optimization/composite-index-design"
+                  },
+                  {
+                    "text": "Index Maintenance Practice",
+                    "link": "database/mysql/-optimization/index-maintenance-practice"
+                  }
+                ]
+              },
+              {
+                "text": "query optimization",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Join Optimization Techniques",
+                    "link": "database/mysql/query-optimization/join-optimization-techniques"
+                  },
+                  {
+                    "text": "Slow Query Analysis",
+                    "link": "database/mysql/query-optimization/slow-query-analysis"
+                  },
+                  {
+                    "text": "Subquery Optimization",
+                    "link": "database/mysql/query-optimization/subquery-optimization"
+                  }
+                ]
+              },
+              {
+                "text": "storage engine",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Innodb Architecture",
+                    "link": "database/mysql/storage-engine/innodb-architecture"
+                  },
+                  {
+                    "text": "Myisam Vs Innodb",
+                    "link": "database/mysql/storage-engine/myisam-vs-innodb"
+                  },
+                  {
+                    "text": "Transaction Log Mechanism",
+                    "link": "database/mysql/storage-engine/transaction-log-mechanism"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "postgresql",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "advanced features",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Jsonb Data Type",
+                    "link": "database/postgresql/advanced-features/jsonb-data-type"
+                  },
+                  {
+                    "text": "Table Inheritance",
+                    "link": "database/postgresql/advanced-features/table-inheritance"
+                  },
+                  {
+                    "text": "Window Functions",
+                    "link": "database/postgresql/advanced-features/window-functions"
+                  }
+                ]
+              },
+              {
+                "text": "extensions",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Pg Stat Statements",
+                    "link": "database/postgresql/extensions/pg-stat-statements"
+                  },
+                  {
+                    "text": "Pg Trgm Text Search",
+                    "link": "database/postgresql/extensions/pg-trgm-text-search"
+                  },
+                  {
+                    "text": "Postgis Geographic Data",
+                    "link": "database/postgresql/extensions/postgis-geographic-data"
+                  }
+                ]
+              },
+              {
+                "text": "performance tuning",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Index Types Comparison",
+                    "link": "database/postgresql/performance-tuning/-types-comparison"
+                  },
+                  {
+                    "text": "Query Plan Analysis",
+                    "link": "database/postgresql/performance-tuning/query-plan-analysis"
+                  },
+                  {
+                    "text": "Vacuum And Autovacuum",
+                    "link": "database/postgresql/performance-tuning/vacuum-and-autovacuum"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "redis",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "cache patterns",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Cache Aside Pattern",
+                    "link": "database/redis/cache-patterns/cache-aside-pattern"
+                  },
+                  {
+                    "text": "Cache Penetration Defense",
+                    "link": "database/redis/cache-patterns/cache-penetration-defense"
+                  },
+                  {
+                    "text": "Distributed Cache Lock",
+                    "link": "database/redis/cache-patterns/distributed-cache-lock"
+                  }
+                ]
+              },
+              {
+                "text": "cluster",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Cluster Mode Deployment",
+                    "link": "database/redis/cluster/cluster-mode-deployment"
+                  },
+                  {
+                    "text": "Master Slave Replication",
+                    "link": "database/redis/cluster/master-slave-replication"
+                  },
+                  {
+                    "text": "Sentinel High Availability",
+                    "link": "database/redis/cluster/sentinel-high-availability"
+                  }
+                ]
+              },
+              {
+                "text": "data structures",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "List And Set Operations",
+                    "link": "database/redis/data-structures/list-and-set-operations"
+                  },
+                  {
+                    "text": "Sorted Set Applications",
+                    "link": "database/redis/data-structures/sorted-set-applications"
+                  },
+                  {
+                    "text": "String And Hash Commands",
+                    "link": "database/redis/data-structures/string-and-hash-commands"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "text": "数据库事务处理详解",
             "link": "database/database-transaction-processing"
           },
@@ -203,6 +743,186 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         "text": "java",
         "collapsed": true,
         "items": [
+          {
+            "text": "concurrency",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "advanced patterns",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Future And Completablefuture",
+                    "link": "java/concurrency/advanced-patterns/future-and-completablefuture"
+                  },
+                  {
+                    "text": "Producer Consumer Pattern",
+                    "link": "java/concurrency/advanced-patterns/producer-consumer-pattern"
+                  },
+                  {
+                    "text": "Reactive Programming Intro",
+                    "link": "java/concurrency/advanced-patterns/reactive-programming-intro"
+                  }
+                ]
+              },
+              {
+                "text": "juc framework",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Atomic Classes Usage",
+                    "link": "java/concurrency/juc-framework/atomic-classes-usage"
+                  },
+                  {
+                    "text": "Concurrent Collections",
+                    "link": "java/concurrency/juc-framework/concurrent-collections"
+                  },
+                  {
+                    "text": "Executor Service Guide",
+                    "link": "java/concurrency/juc-framework/executor-service-guide"
+                  }
+                ]
+              },
+              {
+                "text": "thread fundamentals",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Synchronized Vs Lock",
+                    "link": "java/concurrency/thread-fundamentals/synchronized-vs-lock"
+                  },
+                  {
+                    "text": "Thread Lifecycle States",
+                    "link": "java/concurrency/thread-fundamentals/thread-lifecycle-states"
+                  },
+                  {
+                    "text": "Thread Pool Best Practices",
+                    "link": "java/concurrency/thread-fundamentals/thread-pool-best-practices"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "jvm",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "class loading",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Class Loader Mechanism",
+                    "link": "java/jvm/class-loading/class-loader-mechanism"
+                  },
+                  {
+                    "text": "Dynamic Class Loading",
+                    "link": "java/jvm/class-loading/dynamic-class-loading"
+                  },
+                  {
+                    "text": "Jvm Bytecode Basics",
+                    "link": "java/jvm/class-loading/jvm-bytecode-basics"
+                  }
+                ]
+              },
+              {
+                "text": "memory model",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Garbage Collection Algorithms",
+                    "link": "java/jvm/memory-model/garbage-collection-algorithms"
+                  },
+                  {
+                    "text": "Heap And Stack Structure",
+                    "link": "java/jvm/memory-model/heap-and-stack-structure"
+                  },
+                  {
+                    "text": "Memory Allocation Strategies",
+                    "link": "java/jvm/memory-model/memory-allocation-strategies"
+                  }
+                ]
+              },
+              {
+                "text": "performance tuning",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Gc Log Analysis",
+                    "link": "java/jvm/performance-tuning/gc-log-analysis"
+                  },
+                  {
+                    "text": "Jvm Parameter Optimization",
+                    "link": "java/jvm/performance-tuning/jvm-parameter-optimization"
+                  },
+                  {
+                    "text": "Memory Leak Detection",
+                    "link": "java/jvm/performance-tuning/memory-leak-detection"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "spring",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "core concepts",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Bean Lifecycle Management",
+                    "link": "java/spring/core-concepts/bean-lifecycle-management"
+                  },
+                  {
+                    "text": "Dependency Injection Patterns",
+                    "link": "java/spring/core-concepts/dependency-injection-patterns"
+                  },
+                  {
+                    "text": "Ioc Container Principles",
+                    "link": "java/spring/core-concepts/ioc-container-principles"
+                  }
+                ]
+              },
+              {
+                "text": "spring boot",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Actuator Monitoring",
+                    "link": "java/spring/spring-boot/actuator-monitoring"
+                  },
+                  {
+                    "text": "Auto Configuration Analysis",
+                    "link": "java/spring/spring-boot/auto-configuration-analysis"
+                  },
+                  {
+                    "text": "Starter Dependency Management",
+                    "link": "java/spring/spring-boot/starter-dependency-management"
+                  }
+                ]
+              },
+              {
+                "text": "spring cloud",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Config Server Setup",
+                    "link": "java/spring/spring-cloud/config-server-setup"
+                  },
+                  {
+                    "text": "Gateway Routing Patterns",
+                    "link": "java/spring/spring-cloud/gateway-routing-patterns"
+                  },
+                  {
+                    "text": "Service Discovery Eureka",
+                    "link": "java/spring/spring-cloud/service-discovery-eureka"
+                  }
+                ]
+              }
+            ]
+          },
           {
             "text": "Java并发编程深入理解",
             "link": "java/java-concurrent-programming"
@@ -334,6 +1054,186 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         "text": "tech articles",
         "collapsed": true,
         "items": [
+          {
+            "text": "backend",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "architecture",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Api Design Patterns",
+                    "link": "tech-articles/backend/architecture/api-design-patterns"
+                  },
+                  {
+                    "text": "Database Schema Design",
+                    "link": "tech-articles/backend/architecture/database-schema-design"
+                  },
+                  {
+                    "text": "Microservices Design",
+                    "link": "tech-articles/backend/architecture/microservices-design"
+                  }
+                ]
+              },
+              {
+                "text": "performance",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Cache Strategy Selection",
+                    "link": "tech-articles/backend/performance/cache-strategy-selection"
+                  },
+                  {
+                    "text": "Database Query Optimization",
+                    "link": "tech-articles/backend/performance/database-query-optimization"
+                  },
+                  {
+                    "text": "Server Performance Tuning",
+                    "link": "tech-articles/backend/performance/server-performance-tuning"
+                  }
+                ]
+              },
+              {
+                "text": "security",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Api Security Best Practices",
+                    "link": "tech-articles/backend/security/api-security-best-practices"
+                  },
+                  {
+                    "text": "Authentication Patterns",
+                    "link": "tech-articles/backend/security/authentication-patterns"
+                  },
+                  {
+                    "text": "Input Validation Defense",
+                    "link": "tech-articles/backend/security/input-validation-defense"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "frontend",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "react",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Hooks Best Practices",
+                    "link": "tech-articles/frontend/react/hooks-best-practices"
+                  },
+                  {
+                    "text": "React Render Optimization",
+                    "link": "tech-articles/frontend/react/react-render-optimization"
+                  },
+                  {
+                    "text": "React State Management",
+                    "link": "tech-articles/frontend/react/react-state-management"
+                  }
+                ]
+              },
+              {
+                "text": "typescript",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Advanced Type Patterns",
+                    "link": "tech-articles/frontend/typescript/advanced-type-patterns"
+                  },
+                  {
+                    "text": "Generic Programming",
+                    "link": "tech-articles/frontend/typescript/generic-programming"
+                  },
+                  {
+                    "text": "Type Inference Mechanism",
+                    "link": "tech-articles/frontend/typescript/type-inference-mechanism"
+                  }
+                ]
+              },
+              {
+                "text": "vue",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Vue Performance Optimization",
+                    "link": "tech-articles/frontend/vue/vue-performance-optimization"
+                  },
+                  {
+                    "text": "Vue Reactivity Deep Dive",
+                    "link": "tech-articles/frontend/vue/vue-reactivity-deep-dive"
+                  },
+                  {
+                    "text": "Vue3 Composition Api",
+                    "link": "tech-articles/frontend/vue/vue3-composition-api"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "text": "tools",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "ci cd",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Automated Testing Integration",
+                    "link": "tech-articles/tools/ci-cd/automated-testing-integration"
+                  },
+                  {
+                    "text": "Deployment Automation",
+                    "link": "tech-articles/tools/ci-cd/deployment-automation"
+                  },
+                  {
+                    "text": "Github Actions Patterns",
+                    "link": "tech-articles/tools/ci-cd/github-actions-patterns"
+                  }
+                ]
+              },
+              {
+                "text": "docker",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Docker Compose Patterns",
+                    "link": "tech-articles/tools/docker/docker-compose-patterns"
+                  },
+                  {
+                    "text": "Docker Image Optimization",
+                    "link": "tech-articles/tools/docker/docker-image-optimization"
+                  },
+                  {
+                    "text": "Docker Networking Guide",
+                    "link": "tech-articles/tools/docker/docker-networking-guide"
+                  }
+                ]
+              },
+              {
+                "text": "git",
+                "collapsed": false,
+                "items": [
+                  {
+                    "text": "Git Hooks Automation",
+                    "link": "tech-articles/tools/git/git-hooks-automation"
+                  },
+                  {
+                    "text": "Git Internal Mechanism",
+                    "link": "tech-articles/tools/git/git-internal-mechanism"
+                  },
+                  {
+                    "text": "Git Workflow Strategies",
+                    "link": "tech-articles/tools/git/git-workflow-strategies"
+                  }
+                ]
+              }
+            ]
+          },
           {
             "text": "前端工程化最佳实践",
             "link": "tech-articles/frontend-engineering-best-practices"
@@ -569,6 +1469,191 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       {
         "text": "开发工具",
         "link": "tools/"
+      }
+    ]
+  },
+  "/books/": {
+    "base": "/books/",
+    "items": [
+      {
+        "text": "ai",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "deep learning",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Deep Learning Book",
+                "link": "ai/deep-learning/deep-learning-book"
+              },
+              {
+                "text": "Neural Network Design",
+                "link": "ai/deep-learning/neural-network-design"
+              },
+              {
+                "text": "Practical Deep Learning",
+                "link": "ai/deep-learning/practical-deep-learning"
+              }
+            ]
+          },
+          {
+            "text": "machine learning",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Hands On Machine Learning",
+                "link": "ai/machine-learning/hands-on-machine-learning"
+              },
+              {
+                "text": "Ml Algorithm Internals",
+                "link": "ai/machine-learning/ml-algorithm-internals"
+              },
+              {
+                "text": "Statistical Learning Methods",
+                "link": "ai/machine-learning/statistical-learning-methods"
+              }
+            ]
+          },
+          {
+            "text": "nlp",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Natural Language Processing",
+                "link": "ai/nlp/natural-language-processing"
+              },
+              {
+                "text": "Speech And Language Processing",
+                "link": "ai/nlp/speech-and-language-processing"
+              },
+              {
+                "text": "Transformer Revolution",
+                "link": "ai/nlp/transformer-revolution"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "architecture",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "ddd",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Ddd Domain Modeling",
+                "link": "architecture/ddd/ddd-domain-modeling"
+              },
+              {
+                "text": "Ddd Strategic Design",
+                "link": "architecture/ddd/ddd-strategic-design"
+              },
+              {
+                "text": "Ddd Tactical Patterns",
+                "link": "architecture/ddd/ddd-tactical-patterns"
+              }
+            ]
+          },
+          {
+            "text": "design patterns",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Distributed Systems Patterns",
+                "link": "architecture/design-patterns/distributed-systems-patterns"
+              },
+              {
+                "text": "Enterprise Patterns Summary",
+                "link": "architecture/design-patterns/enterprise-patterns-summary"
+              },
+              {
+                "text": "Gang Of Four Patterns",
+                "link": "architecture/design-patterns/gang-of-four-patterns"
+              }
+            ]
+          },
+          {
+            "text": "microservices",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Building Microservices",
+                "link": "architecture/microservices/building-microservices"
+              },
+              {
+                "text": "Microservices Architecture Book",
+                "link": "architecture/microservices/microservices-architecture-book"
+              },
+              {
+                "text": "Microservices Security",
+                "link": "architecture/microservices/microservices-security"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "programming",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "go",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Go Concurrency Patterns",
+                "link": "programming/go/go-concurrency-patterns"
+              },
+              {
+                "text": "Go Design Principles",
+                "link": "programming/go/go-design-principles"
+              },
+              {
+                "text": "Go Programming Blueprint",
+                "link": "programming/go/go-programming-blueprint"
+              }
+            ]
+          },
+          {
+            "text": "java",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Effective Java Summary",
+                "link": "programming/java/effective-java-summary"
+              },
+              {
+                "text": "Java Concurrency In Practice",
+                "link": "programming/java/java-concurrency-in-practice"
+              },
+              {
+                "text": "Java Performance Guide",
+                "link": "programming/java/java-performance-guide"
+              }
+            ]
+          },
+          {
+            "text": "python",
+            "collapsed": false,
+            "items": [
+              {
+                "text": "Fluent Python Notes",
+                "link": "programming/python/fluent-python-notes"
+              },
+              {
+                "text": "Python Performance Tuning",
+                "link": "programming/python/python-performance-tuning"
+              },
+              {
+                "text": "Python Tricks Collection",
+                "link": "programming/python/python-tricks-collection"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

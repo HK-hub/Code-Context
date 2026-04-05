@@ -123,7 +123,7 @@ const config: UserConfig = {
   // Theme configuration
   themeConfig: {
     // Logo
-    logo: '/logo.svg',
+    logo: 'https://vitepress.dev/vitepress-logo-mini.svg',
 
     // Site title in nav bar
     siteTitle: '码出意境',

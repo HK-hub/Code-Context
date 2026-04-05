@@ -11,7 +11,7 @@ const DOCS_DIR = path.resolve(__dirname, '../../')
 // 顶级分区配置
 // - 'blog', 'ai', 'backend': 单一 sidebar，所有子目录折叠显示
 // - 'projects': 每个子项目独立 sidebar，进入子项目后只显示该项目内容
-const SECTIONS = ['ai', 'backend', 'blog', 'projects']
+const SECTIONS = ['ai', 'backend', 'blog', 'projects', 'books']
 
 // projects 下的子项目需要独立 sidebar
 const PROJECT_SUBDIRS = ['demos', 'experiments', 'hcontext', 'opensource', 'tools']
