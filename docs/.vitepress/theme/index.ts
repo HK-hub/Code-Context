@@ -5,6 +5,7 @@ import { useRoute } from 'vitepress'
 import Layout from './Layout.vue'
 import Categories from './components/Categories.vue'
 import Archives from './components/Archives.vue'
+import Links from './components/Links.vue'
 import PostMeta from './components/PostMeta.vue'
 import BackToTop from './components/BackToTop.vue'
 import { Icon } from '@iconify/vue'
@@ -20,6 +21,7 @@ export default {
     // Register global components for use in markdown
     app.component('Categories', Categories)
     app.component('Archives', Archives)
+    app.component('Links', Links)
     app.component('PostMeta', PostMeta)
     app.component('BackToTop', BackToTop)
     app.component('Icon', Icon)

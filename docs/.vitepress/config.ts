@@ -123,25 +123,19 @@ const config: UserConfig = {
   // Theme configuration
   themeConfig: {
     // Logo
-    logo: 'https://vitepress.dev/vitepress-logo-mini.svg',
+    logo: '/logo.svg',
+    // Dark mode logo
+    logoLink: '/',
 
     // Site title in nav bar
     siteTitle: '码出意境',
 
     // Navigation
     nav: [
-      { text: '首页', link: '/' },
-      {
-        text: '关于',
-        items: [
-          { text: '主页', link: '/' },
-          { text: '友链', link: '/friends' },
-          { text: '更新日志', link: '/changelog' }
-        ]
-      },
       { text: '博客', link: '/blog/' },
       { text: 'AI', link: '/ai/' },
       { text: '后端', link: '/backend/' },
+      { text: '书籍', link: '/books/' },
       {
         text: '项目',
         items: [
@@ -152,9 +146,21 @@ const config: UserConfig = {
           { text: '工具', link: '/projects/tools/' }
         ]
       },
-      { text: '技术书籍', link: '/books/' },
-      { text: '分类', link: '/categories' },
-      { text: '归档', link: '/archives' }
+      {
+        text: '归档',
+        items: [
+          { text: '分类', link: '/categories' },
+          { text: '归档', link: '/archives' }
+        ]
+      },
+      {
+        text: '关于',
+        items: [
+          { text: '我的信息', link: '/about/me' },
+          { text: '友链站点', link: '/about/friends' },
+          { text: '更新日志', link: '/about/changelog' }
+        ]
+      }
     ],
 
     // Sidebar (auto-generated)
