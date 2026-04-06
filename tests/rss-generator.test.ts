@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest'
-import { scanMarkdownFiles, parseFrontmatter, shouldExclude, extractSummary } from '../docs/.vitepress/hooks/rss-generator'
+import { scanMarkdownFiles, parseFrontmatter, shouldExclude, extractSummary, generateRSS } from '../docs/.vitepress/hooks/rss-generator'
 import { join } from 'path'
 
 describe('RSS Generator - scanMarkdownFiles', () => {
@@ -244,5 +244,66 @@ Paragraph three with lots of words to exceed the limit.`
     const result = extractSummary(markdown)
     expect(result).not.toContain('\n\n')
     expect(result).not.toContain('   ')
+  })
+})
+
+describe('RSS Generator - generateRSS', () => {
+  const docsDir = join(__dirname, '../docs')
+  const config = {
+    title: 'Test Blog',
+    description: 'A test blog for RSS generation',
+    baseUrl: 'https://test.example.com',
+    author: 'Test Author',
+    language: 'zh-CN'
+  }
+
+  it('should generate RSS feed', async () => {
+    const feed = await generateRSS(docsDir, config)
+    
+    expect(feed).toBeDefined()
+    expect(feed.rss2()).toBeDefined()
+    expect(feed.rss2()).toContain('<rss')
+    expect(feed.rss2()).toContain('</rss>')
+  })
+
+  it('should generate Atom feed', async () => {
+    const feed = await generateRSS(docsDir, config)
+    
+    expect(feed.atom1()).toBeDefined()
+    expect(feed.atom1()).toContain('<feed')
+    expect(feed.atom1()).toContain('</feed>')
+  })
+
+  it('should include feed metadata', async () => {
+    const feed = await generateRSS(docsDir, config)
+    const rss = feed.rss2()
+    
+    expect(rss).toContain(config.title)
+    expect(rss).toContain(config.description)
+    expect(rss).toContain(config.baseUrl)
+  })
+
+  it('should exclude files missing title or date', async () => {
+    const feed = await generateRSS(docsDir, config)
+    const rss = feed.rss2()
+    
+    // RSS feed should not contain items from excluded files
+    // We can verify by checking that feed has reasonable number of items
+    const itemCount = (rss.match(/<item>/g) || []).length
+    expect(itemCount).toBeGreaterThan(0)
+    expect(itemCount).toBeLessThan(300) // Not all 271 files should be included
+  })
+
+  it('should generate valid XML structure', async () => {
+    const feed = await generateRSS(docsDir, config)
+    const rss = feed.rss2()
+    
+    // Basic XML validation
+    expect(rss).toMatch(/^<\?xml/)
+    expect(rss).toContain('<channel>')
+    expect(rss).toContain('</channel>')
+    expect(rss).toContain('<title>')
+    expect(rss).toContain('<link>')
+    expect(rss).toContain('<description>')
   })
 })

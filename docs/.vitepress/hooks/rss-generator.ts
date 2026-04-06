@@ -1,4 +1,4 @@
-import type { Feed } from 'feed'
+import { Feed } from 'feed'
 import { readFileSync, writeFileSync } from 'fs'
 import { join, resolve } from 'path'
 import matter from 'gray-matter'
@@ -171,4 +171,99 @@ export function extractSummary(markdown: string, maxLength = 200): string {
   }
   
   return text
+}
+
+/**
+ * 生成RSS Feed
+ * @param docsDir docs目录路径
+ * @param config RSS配置
+ * @returns Feed实例
+ */
+export async function generateRSS(docsDir: string, config: RSSConfig): Promise<Feed> {
+  // 创建Feed实例
+  const feed = new Feed({
+    title: config.title,
+    description: config.description,
+    id: config.baseUrl,
+    link: config.baseUrl,
+    language: config.language,
+    copyright: 'All rights reserved',
+    author: {
+      name: config.author,
+      link: config.baseUrl
+    }
+  })
+
+  // 扫描markdown文件
+  const files = await scanMarkdownFiles(docsDir)
+  console.log(`[RSS] Processing ${files.length} files`)
+
+  // 收集FeedItem
+  const feedItems: FeedItem[] = []
+
+  for (const filePath of files) {
+    try {
+      // 读取文件内容
+      const content = readFileSync(filePath, 'utf-8')
+      
+      // 解析frontmatter
+      const frontmatter = parseFrontmatter(content)
+      
+      // 检查是否排除
+      if (shouldExclude(filePath, frontmatter)) {
+        continue
+      }
+
+      // 提取摘要
+      const summary = extractSummary(content)
+      
+      // 解析日期
+      let date: Date
+      if (typeof frontmatter.date === 'string') {
+        date = new Date(frontmatter.date)
+      } else {
+        date = frontmatter.date as Date
+      }
+
+      // 构建相对路径（用于链接）
+      const relativePath = filePath
+        .replace(docsDir, '')
+        .replace(/\.md$/, '')
+        .replace(/\\/g, '/')
+      
+      // 构建完整链接
+      const link = `${config.baseUrl}${relativePath}`
+
+      // 创建FeedItem
+      feedItems.push({
+        title: frontmatter.title!,
+        link: link,
+        description: summary,
+        date: date,
+        categories: frontmatter.categories,
+        tags: frontmatter.tags,
+        author: frontmatter.author
+      })
+    } catch (error) {
+      console.error(`[RSS] Error processing ${filePath}:`, error)
+    }
+  }
+
+  // 按日期排序（降序）
+  feedItems.sort((a, b) => b.date.getTime() - a.date.getTime())
+  console.log(`[RSS] Generated ${feedItems.length} feed items`)
+
+  // 添加到feed
+  for (const item of feedItems) {
+    feed.addItem({
+      title: item.title,
+      id: item.link,
+      link: item.link,
+      description: item.description,
+      date: item.date,
+      author: item.author ? [{ name: item.author }] : undefined
+    })
+  }
+
+  return feed
 }
