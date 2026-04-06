@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest'
-import { scanMarkdownFiles, parseFrontmatter, shouldExclude } from '../docs/.vitepress/hooks/rss-generator'
+import { scanMarkdownFiles, parseFrontmatter, shouldExclude, extractSummary } from '../docs/.vitepress/hooks/rss-generator'
 import { join } from 'path'
 
 describe('RSS Generator - scanMarkdownFiles', () => {
@@ -152,5 +152,97 @@ describe('RSS Generator - shouldExclude', () => {
     const frontmatter = { title: 'Article', date: '2026-04-06', categories: ['blog'] }
     const result = shouldExclude('test.md', frontmatter)
     expect(result).toBe(false)
+  })
+})
+
+describe('RSS Generator - extractSummary', () => {
+  it('should remove frontmatter from markdown', () => {
+    const markdown = `---
+title: Test Article
+date: '2026-04-06'
+---
+
+# Content here`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('title')
+    expect(result).not.toContain('date')
+    expect(result).toContain('Content here')
+  })
+
+  it('should remove code blocks', () => {
+    const markdown = `
+Some text before.
+
+\`\`\`javascript
+const code = 'should be removed'
+\`\`\`
+
+Some text after.`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('const code')
+    expect(result).toContain('Some text before')
+    expect(result).toContain('Some text after')
+  })
+
+  it('should remove inline code', () => {
+    const markdown = `Use the \`console.log()\` function for debugging.`
+    const result = extractSummary(markdown)
+    expect(result).toBe('Use the console.log() function for debugging.')
+  })
+
+  it('should remove images', () => {
+    const markdown = `See the diagram ![Architecture](./image.png) for details.`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('![Architecture]')
+    expect(result).toBe('See the diagram for details.')
+  })
+
+  it('should remove links but keep text', () => {
+    const markdown = `Check [Official Docs](https://example.com) for more info.`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('https://example.com')
+    expect(result).toBe('Check Official Docs for more info.')
+  })
+
+  it('should remove headers markers', () => {
+    const markdown = `# Main Title
+## Subsection
+### Details`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('#')
+    expect(result).toContain('Main Title')
+    expect(result).toContain('Subsection')
+  })
+
+  it('should remove bold markers', () => {
+    const markdown = `This is **important** and __critical__ information.`
+    const result = extractSummary(markdown)
+    expect(result).toBe('This is important and critical information.')
+  })
+
+  it('should remove italic markers', () => {
+    const markdown = `This is *emphasized* and _highlighted_ text.`
+    const result = extractSummary(markdown)
+    expect(result).toBe('This is emphasized and highlighted text.')
+  })
+
+  it('should remove HTML tags', () => {
+    const markdown = `Use <strong>strong</strong> and <em>emphasis</em> tags.`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('<strong>')
+    expect(result).not.toContain('<em>')
+    expect(result).toContain('strong')
+  })
+
+  it('should clean up whitespace and limit length', () => {
+    const markdown = `
+Paragraph one.
+
+Paragraph   two.
+
+Paragraph three with lots of words to exceed the limit.`
+    const result = extractSummary(markdown)
+    expect(result).not.toContain('\n\n')
+    expect(result).not.toContain('   ')
   })
 })

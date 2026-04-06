@@ -110,3 +110,65 @@ export function shouldExclude(filePath: string, frontmatter: Partial<Frontmatter
   }
   return false
 }
+
+/**
+ * 从markdown内容提取摘要
+ * @param markdown markdown内容
+ * @param maxLength 最大长度，默认200
+ * @returns 清理后的摘要文本
+ */
+export function extractSummary(markdown: string, maxLength = 200): string {
+  let text = markdown
+  
+  // Remove frontmatter
+  text = text.replace(/^---[\s\S]*?---\n?/, '')
+  
+  // Remove code blocks
+  text = text.replace(/```[\s\S]*?```/g, '')
+  
+  // Remove inline code
+  text = text.replace(/`([^`]+)`/g, '$1')
+  
+  // Remove images
+  text = text.replace(/!\[([^\]]*)\]\([^)]+\)/g, '')
+  
+  // Remove links but keep text
+  text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+  
+  // Remove headers
+  text = text.replace(/^#{1,6}\s+/gm, '')
+  
+  // Remove bold
+  text = text.replace(/\*\*([^*]+)\*\*/g, '$1')
+  text = text.replace(/__([^_]+)__/g, '$1')
+  
+  // Remove italic
+  text = text.replace(/\*([^*]+)\*/g, '$1')
+  text = text.replace(/_([^_]+)_/g, '$1')
+  
+  // Remove HTML
+  text = text.replace(/<[^>]+>/g, '')
+  
+  // Remove quotes
+  text = text.replace(/^>\s+/gm, '')
+  
+  // Remove list markers
+  text = text.replace(/^[\*\-\+]\s+/gm, '')
+  text = text.replace(/^\d+\.\s+/gm, '')
+  
+  // Clean whitespace
+  text = text.replace(/\n+/g, ' ')
+  text = text.replace(/\s+/g, ' ')
+  text = text.trim()
+  
+  // Limit length
+  if (text.length > maxLength) {
+    text = text.substring(0, maxLength).trim()
+    const lastSpace = text.lastIndexOf(' ')
+    if (lastSpace > maxLength * 0.8) {
+      text = text.substring(0, lastSpace)
+    }
+  }
+  
+  return text
+}
