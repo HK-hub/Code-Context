@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest'
-import { scanMarkdownFiles } from '../docs/.vitepress/hooks/rss-generator'
+import { scanMarkdownFiles, parseFrontmatter } from '../docs/.vitepress/hooks/rss-generator'
 import { join } from 'path'
 
 describe('RSS Generator - scanMarkdownFiles', () => {
@@ -52,5 +52,67 @@ describe('RSS Generator - scanMarkdownFiles', () => {
     
     const hasBlogFiles = files.some(f => f.includes('/blog/'))
     expect(hasBlogFiles).toBe(true)
+  })
+})
+
+describe('RSS Generator - parseFrontmatter', () => {
+  it('should parse valid frontmatter', () => {
+    const content = `---
+title: Test Article
+date: '2026-04-06'
+categories:
+  - blog
+tags:
+  - test
+---
+
+# Test Content`
+
+    const result = parseFrontmatter(content)
+    
+    expect(result.title).toBe('Test Article')
+    expect(result.date).toBe('2026-04-06')
+    expect(result.categories).toEqual(['blog'])
+    expect(result.tags).toEqual(['test'])
+  })
+
+  it('should handle missing optional fields', () => {
+    const content = `---
+title: Minimal Article
+date: '2026-04-06'
+---
+
+Content here`
+
+    const result = parseFrontmatter(content)
+    
+    expect(result.title).toBe('Minimal Article')
+    expect(result.categories).toBeUndefined()
+    expect(result.tags).toBeUndefined()
+    expect(result.author).toBeUndefined()
+  })
+
+  it('should handle exclude field', () => {
+    const content = `---
+title: Draft
+date: '2026-04-06'
+exclude: true
+---
+
+Draft content`
+
+    const result = parseFrontmatter(content)
+    
+    expect(result.exclude).toBe(true)
+  })
+
+  it('should return empty object for no frontmatter', () => {
+    const content = `# No Frontmatter
+
+Just content`
+
+    const result = parseFrontmatter(content)
+    
+    expect(result).toEqual({})
   })
 })

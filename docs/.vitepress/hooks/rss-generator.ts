@@ -1,7 +1,7 @@
 import type { Feed } from 'feed'
 import { readFileSync, writeFileSync } from 'fs'
 import { join, resolve } from 'path'
-import * as matter from 'gray-matter'
+import matter from 'gray-matter'
 import { globby } from 'globby'
 
 /**
@@ -76,4 +76,19 @@ export async function scanMarkdownFiles(docsDir: string): Promise<string[]> {
 
   console.log(`[RSS] Scanned ${allFiles.length} markdown files`)
   return allFiles
+}
+
+/**
+ * 解析frontmatter元数据
+ * @param content markdown内容
+ * @returns frontmatter对象
+ */
+export function parseFrontmatter(content: string): Partial<Frontmatter> {
+  try {
+    const { data } = matter(content)
+    return data as Partial<Frontmatter>
+  } catch (error) {
+    console.error('[RSS] Error parsing frontmatter:', error)
+    return {}
+  }
 }
