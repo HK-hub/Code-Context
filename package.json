@@ -23,6 +23,7 @@
   "devDependencies": {
     "@iconify/vue": "^5.0.0",
     "@types/node": "^20.0.0",
+    "feed": "^4.2.2",
     "globby": "^16.2.0",
     "gray-matter": "^4.0.3",
     "markdown-it-mathjax3": "^4.3.2",
