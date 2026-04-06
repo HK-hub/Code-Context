@@ -49,3 +49,31 @@ export interface ScannedFile {
   frontmatter: Frontmatter
   content: string
 }
+
+/**
+ * 扫描markdown文件
+ * @param docsDir docs目录路径
+ * @returns markdown文件路径数组
+ */
+export async function scanMarkdownFiles(docsDir: string): Promise<string[]> {
+  // 扫描所有markdown文件
+  const allFiles = await globby(['**/*.md'], {
+    cwd: docsDir,
+    absolute: true,
+    ignore: [
+      // 排除.vitepress目录
+      '**/.vitepress/**',
+      // 排除tests目录
+      '**/tests/**',
+      // 排除README文件
+      '**/README.md',
+      // 排除TODO文件
+      '**/TODO.md',
+      // 排除index文件(目录索引页)
+      '**/index.md'
+    ]
+  })
+
+  console.log(`[RSS] Scanned ${allFiles.length} markdown files`)
+  return allFiles
+}
