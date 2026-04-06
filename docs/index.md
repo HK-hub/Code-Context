@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: 码出意境
-  text: 技术博客与开源文档站
-  tagline: 分享技术，记录成长
+  text: 思考沉淀，灵感生长
+  tagline: 深耕后端架构，探索 AI 边界，全栈实践，开源共享，记录技术进阶之路。每一行代码都有故事，每一篇文皆有洞见，以代码为笔，书写意境
   image:
     light: /hero-logo.svg
     dark: /hero-logo-dark.svg
