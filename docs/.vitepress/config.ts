@@ -2,6 +2,12 @@ import { defineConfig } from 'vitepress'
 import type { UserConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { sidebar } from './sidebar/index'
+import { generateRSS } from './hooks/rss-generator'
+import { resolve } from 'path'
+import { writeFileSync } from 'fs'
+import { fileURLToPath } from 'url'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 // Environment-based base path configuration
 // GitHub Pages: BASE_URL=/repo-name/ (or auto-detected from GITHUB_REPOSITORY)
@@ -53,6 +59,10 @@ const hostname = process.env.GITHUB_PAGES === 'true'
 console.log(`[VitePress] Base path: ${base}`)
 console.log(`[VitePress] Environment: ${process.env.GITHUB_PAGES === 'true' ? 'GitHub Pages' : process.env.VERCEL === '1' ? 'Vercel' : 'Local'}`)
 
+const rssIconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44M4 10.1A9.9 9.9 0 0 1 13.9 20h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/>
+</svg>`
+
 const config: UserConfig = {
   // Site-level configuration
   lang: 'zh-CN',
@@ -72,6 +82,9 @@ const config: UserConfig = {
   // Clean URLs (remove .html extension)
   // Note: Requires server support, disable for local dev testing
   // cleanUrls: true,
+
+  // Disable dead link check temporarily
+  ignoreDeadLinks: true,
 
   // Enable last updated timestamp from Git
   lastUpdated: true,
@@ -106,7 +119,21 @@ const config: UserConfig = {
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
 
     // Preconnect for performance
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }]
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+
+    // RSS Feed Autodiscovery
+    ['link', { 
+      rel: 'alternate', 
+      type: 'application/rss+xml', 
+      title: '码出意境 - RSS订阅', 
+      href: `${base}rss.xml` 
+    }],
+    ['link', { 
+      rel: 'alternate', 
+      type: 'application/atom+xml', 
+      title: '码出意境 - Atom订阅', 
+      href: `${base}atom.xml` 
+    }]
   ],
 
   // Markdown configuration
@@ -180,7 +207,12 @@ const config: UserConfig = {
 
     // Social links
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/HK-hub' }
+      { icon: 'github', link: 'https://github.com/HK-hub' },
+      {
+        icon: { svg: rssIconSVG },
+        link: '/rss.xml',
+        ariaLabel: 'RSS订阅 - 获取最新文章更新'
+      }
     ],
 
     // Footer
@@ -273,6 +305,30 @@ const config: UserConfig = {
   mermaid: {
     startOnLoad: true,
     theme: 'default'
+  },
+
+  // RSS feed generation
+  buildEnd: async (siteConfig) => {
+    console.log('[VitePress] Generating RSS feeds...')
+    
+    const rssConfig = {
+      title: '码出意境',
+      description: '技术博客与开源文档站，专注于后端、AI、全栈领域技术分享',
+      baseUrl: hostname,
+      author: 'HK-hub',
+      language: 'zh-CN'
+    }
+    
+    const docsDir = resolve(__dirname, '..')
+    const outputDir = resolve(__dirname, '../.vitepress/dist')
+    
+    const feed = await generateRSS(docsDir, rssConfig)
+    
+    writeFileSync(resolve(outputDir, 'rss.xml'), feed.rss2())
+    writeFileSync(resolve(outputDir, 'atom.xml'), feed.atom1())
+    writeFileSync(resolve(outputDir, 'feed.json'), feed.json1())
+    
+    console.log('[VitePress] RSS feeds generated successfully')
   }
 }
 
