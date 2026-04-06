@@ -92,3 +92,21 @@ export function parseFrontmatter(content: string): Partial<Frontmatter> {
     return {}
   }
 }
+
+/**
+ * 判断文件是否应排除
+ * @param filePath 文件路径
+ * @param frontmatter frontmatter数据
+ * @returns 是否排除
+ */
+export function shouldExclude(filePath: string, frontmatter: Partial<Frontmatter>): boolean {
+  if (!frontmatter.title || !frontmatter.date) {
+    console.log(`[RSS] Excluded: ${filePath} (missing title or date)`)
+    return true
+  }
+  if (frontmatter.exclude === true) {
+    console.log(`[RSS] Excluded: ${filePath} (exclude=true)`)
+    return true
+  }
+  return false
+}

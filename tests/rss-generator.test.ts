@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest'
-import { scanMarkdownFiles, parseFrontmatter } from '../docs/.vitepress/hooks/rss-generator'
+import { scanMarkdownFiles, parseFrontmatter, shouldExclude } from '../docs/.vitepress/hooks/rss-generator'
 import { join } from 'path'
 
 describe('RSS Generator - scanMarkdownFiles', () => {
@@ -114,5 +114,43 @@ Just content`
     const result = parseFrontmatter(content)
     
     expect(result).toEqual({})
+  })
+})
+
+describe('RSS Generator - shouldExclude', () => {
+  it('should exclude files without title', () => {
+    const frontmatter = { date: '2026-04-06' }
+    const result = shouldExclude('test.md', frontmatter)
+    expect(result).toBe(true)
+  })
+
+  it('should exclude files without date', () => {
+    const frontmatter = { title: 'Test' }
+    const result = shouldExclude('test.md', frontmatter)
+    expect(result).toBe(true)
+  })
+
+  it('should exclude files with exclude=true', () => {
+    const frontmatter = { title: 'Draft', date: '2026-04-06', exclude: true }
+    const result = shouldExclude('draft.md', frontmatter)
+    expect(result).toBe(true)
+  })
+
+  it('should include valid files with all required fields', () => {
+    const frontmatter = { title: 'Valid Article', date: '2026-04-06' }
+    const result = shouldExclude('test.md', frontmatter)
+    expect(result).toBe(false)
+  })
+
+  it('should include files with exclude=false', () => {
+    const frontmatter = { title: 'Article', date: '2026-04-06', exclude: false }
+    const result = shouldExclude('article.md', frontmatter)
+    expect(result).toBe(false)
+  })
+
+  it('should include files without exclude field', () => {
+    const frontmatter = { title: 'Article', date: '2026-04-06', categories: ['blog'] }
+    const result = shouldExclude('test.md', frontmatter)
+    expect(result).toBe(false)
   })
 })
