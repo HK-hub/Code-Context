@@ -166,11 +166,10 @@ const config: UserConfig = {
       {
         text: '项目',
         items: [
-          { text: 'Demos', link: '/projects/demos/' },
-          { text: 'Experiments', link: '/projects/experiments/' },
-          { text: 'HContext', link: '/projects/hcontext/' },
-          { text: '开源项目', link: '/projects/opensource/' },
-          { text: '工具', link: '/projects/tools/' }
+          { text: '开源贡献', link: '/projects/opensource/' },
+          { text: '工具开发', link: '/projects/tools/' },
+          { text: '技术实验', link: '/projects/experiments/' },
+          { text: '项目文档', link: '/projects/project-docs/' }
         ]
       },
       {
