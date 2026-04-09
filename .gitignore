@@ -4,6 +4,8 @@ node_modules/
 # VitePress build outputs
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+.vitepress/cache/
+.vitepress/cache/deps/
 
 # Environment files
 .env
@@ -30,3 +32,4 @@ coverage/
 .planning/
 .superpowers/
 docs/superpowers/
+
