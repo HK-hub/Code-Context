@@ -1,13 +1,13 @@
-import { defineConfig } from 'vitepress'
-import type { UserConfig } from 'vitepress'
-import { withMermaid } from 'vitepress-plugin-mermaid'
-import { sidebar } from './sidebar/index'
-import { generateRSS } from './hooks/rss-generator'
-import { resolve } from 'path'
-import { writeFileSync } from 'fs'
-import { fileURLToPath } from 'url'
+import { defineConfig } from "vitepress";
+import type { UserConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
+import { sidebar } from "./sidebar/index";
+import { generateRSS } from "./hooks/rss-generator";
+import { resolve } from "path";
+import { writeFileSync } from "fs";
+import { fileURLToPath } from "url";
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // Environment-based base path configuration
 // GitHub Pages: BASE_URL=/repo-name/ (or auto-detected from GITHUB_REPOSITORY)
@@ -18,66 +18,70 @@ export function detectBasePath(): string {
   // Priority 1: Explicit BASE_URL environment variable
   if (process.env.BASE_URL) {
     // Ensure it starts with / and ends with /
-    const base = process.env.BASE_URL.startsWith('/')
+    const base = process.env.BASE_URL.startsWith("/")
       ? process.env.BASE_URL
-      : `/${process.env.BASE_URL}`
-    return base.endsWith('/') ? base : `${base}/`
+      : `/${process.env.BASE_URL}`;
+    return base.endsWith("/") ? base : `${base}/`;
   }
 
   // Priority 2: GitHub Pages detection
-  if (process.env.GITHUB_PAGES === 'true') {
+  if (process.env.GITHUB_PAGES === "true") {
     // Extract repo name from GITHUB_REPOSITORY (format: owner/repo)
     if (process.env.GITHUB_REPOSITORY) {
-      const [, repoName] = process.env.GITHUB_REPOSITORY.split('/')
+      const [, repoName] = process.env.GITHUB_REPOSITORY.split("/");
       if (repoName) {
-        return `/${repoName}/`
+        return `/${repoName}/`;
       }
     }
     // Fallback: use code-context as default repo name
-    return '/code-context/'
+    return "/code-context/";
   }
 
   // Priority 3: Vercel detection (uses root by default)
-  if (process.env.VERCEL === '1') {
-    return '/'
+  if (process.env.VERCEL === "1") {
+    return "/";
   }
 
   // Default: root path for local development
-  return '/'
+  return "/";
 }
 
-const base = detectBasePath()
+const base = detectBasePath();
 
 // Determine hostname for sitemap and canonical URLs
-const hostname = process.env.GITHUB_PAGES === 'true'
-  ? 'https://hk-hub.github.io/code-context'
-  : process.env.VERCEL === '1'
-    ? 'https://code-context.vercel.app'
-    : 'http://localhost:5173'
+const hostname =
+  process.env.GITHUB_PAGES === "true"
+    ? "https://hk-hub.github.io/code-context"
+    : process.env.VERCEL === "1"
+      ? "https://code-context.vercel.app"
+      : "http://localhost:5173";
 
 // Log base path for debugging
-console.log(`[VitePress] Base path: ${base}`)
-console.log(`[VitePress] Environment: ${process.env.GITHUB_PAGES === 'true' ? 'GitHub Pages' : process.env.VERCEL === '1' ? 'Vercel' : 'Local'}`)
+console.log(`[VitePress] Base path: ${base}`);
+console.log(
+  `[VitePress] Environment: ${process.env.GITHUB_PAGES === "true" ? "GitHub Pages" : process.env.VERCEL === "1" ? "Vercel" : "Local"}`,
+);
 
 const rssIconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44M4 10.1A9.9 9.9 0 0 1 13.9 20h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/>
-</svg>`
+</svg>`;
 
 const config: UserConfig = {
   // Site-level configuration
-  lang: 'zh-CN',
-  title: '码出意境',
+  lang: "zh-CN",
+  title: "码出意境",
   titleTemplate: true,
-  description: 'Code Context - 技术博客与开源文档站，专注于后端、AI、全栈领域技术分享',
+  description:
+    "Code Context - 技术博客与开源文档站，专注于后端、AI、全栈领域技术分享",
 
   // Base path for dual deployment
   base,
 
   // Source directory (relative to .vitepress/config.ts)
-  srcDir: '.',
+  srcDir: ".",
 
   // Exclude files from being processed
-  srcExclude: ['**/README.md', '**/TODO.md'],
+  srcExclude: ["**/README.md", "**/TODO.md"],
 
   // Clean URLs (remove .html extension)
   // Note: Requires server support, disable for local dev testing
@@ -94,46 +98,71 @@ const config: UserConfig = {
 
   // SEO: Sitemap generation
   sitemap: {
-    hostname: hostname.replace(/\/$/, '')
+    hostname: hostname.replace(/\/$/, ""),
   },
 
   // Global head tags for SEO
   head: [
     // Open Graph
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: '码出意境' }],
-    ['meta', { property: 'og:title', content: '码出意境 | Code Context' }],
-    ['meta', { property: 'og:description', content: '技术博客与开源文档站，专注于后端、AI、全栈领域技术分享' }],
-    ['meta', { property: 'og:image', content: `${hostname}/logo.svg` }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:site_name", content: "码出意境" }],
+    ["meta", { property: "og:title", content: "码出意境 | Code Context" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "技术博客与开源文档站，专注于后端、AI、全栈领域技术分享",
+      },
+    ],
+    ["meta", { property: "og:image", content: `${hostname}/logo.svg` }],
 
     // Twitter Card
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: '码出意境' }],
-    ['meta', { name: 'twitter:description', content: 'Code Context - 技术博客与开源文档站' }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:title", content: "码出意境" }],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content: "Code Context - 技术博客与开源文档站",
+      },
+    ],
 
     // SEO Meta
-    ['meta', { name: 'keywords', content: '码出意境, Code Context, 技术博客, 后端开发, 人工智能, 全栈开发, Java, Python, Vue, VitePress' }],
-    ['meta', { name: 'author', content: 'HK-hub' }],
+    [
+      "meta",
+      {
+        name: "keywords",
+        content:
+          "码出意境, Code Context, 技术博客, 后端开发, 人工智能, 全栈开发, Java, Python, Vue, VitePress",
+      },
+    ],
+    ["meta", { name: "author", content: "HK-hub" }],
 
     // Favicon
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
 
     // Preconnect for performance
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
 
     // RSS Feed Autodiscovery
-    ['link', { 
-      rel: 'alternate', 
-      type: 'application/rss+xml', 
-      title: '码出意境 - RSS订阅', 
-      href: `${base}rss.xml` 
-    }],
-    ['link', { 
-      rel: 'alternate', 
-      type: 'application/atom+xml', 
-      title: '码出意境 - Atom订阅', 
-      href: `${base}atom.xml` 
-    }]
+    [
+      "link",
+      {
+        rel: "alternate",
+        type: "application/rss+xml",
+        title: "码出意境 - RSS订阅",
+        href: `${base}rss.xml`,
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "alternate",
+        type: "application/atom+xml",
+        title: "码出意境 - Atom订阅",
+        href: `${base}atom.xml`,
+      },
+    ],
   ],
 
   // Markdown configuration
@@ -143,50 +172,50 @@ const config: UserConfig = {
     math: true,
     // Image lazy loading
     image: {
-      lazyLoading: true
-    }
+      lazyLoading: true,
+    },
   },
 
   // Theme configuration
   themeConfig: {
     // Logo
-    logo: '/logo.svg',
+    logo: "/logo.svg",
     // Dark mode logo
-    logoLink: '/',
+    logoLink: "/",
 
     // Site title in nav bar
-    siteTitle: '码出意境',
+    siteTitle: "码出意境",
 
     // Navigation
     nav: [
-      { text: '博客', link: '/blog/' },
-      { text: 'AI', link: '/ai/' },
-      { text: '后端', link: '/backend/' },
-      { text: '书籍', link: '/books/' },
+      { text: "博客", link: "/blog/" },
+      { text: "AI", link: "/ai/" },
+      { text: "后端", link: "/backend/" },
+      { text: "书籍", link: "/books/" },
       {
-        text: '项目',
+        text: "项目",
         items: [
-          { text: '开源贡献', link: '/projects/opensource/' },
-          { text: '工具开发', link: '/projects/tools/' },
-          { text: '技术实验', link: '/projects/experiments/' },
-          { text: '项目文档', link: '/projects/project-docs/' }
-        ]
+          { text: "开源贡献", link: "/projects/opensource/" },
+          { text: "工具开发", link: "/projects/tools/" },
+          { text: "技术实验", link: "/projects/experiments/" },
+          { text: "项目文档", link: "/projects/project-docs/" },
+        ],
       },
       {
-        text: '归档',
+        text: "归档",
         items: [
-          { text: '分类', link: '/categories' },
-          { text: '归档', link: '/archives' }
-        ]
+          { text: "分类", link: "/categories" },
+          { text: "归档", link: "/archives" },
+        ],
       },
       {
-        text: '关于',
+        text: "关于",
         items: [
-          { text: '我的信息', link: '/about/me' },
-          { text: '友链站点', link: '/about/friends' },
-          { text: '更新日志', link: '/about/changelog' }
-        ]
-      }
+          { text: "我的信息", link: "/about/me" },
+          { text: "友链站点", link: "/about/friends" },
+          { text: "更新日志", link: "/about/changelog" },
+        ],
+      },
     ],
 
     // Sidebar (auto-generated)
@@ -194,59 +223,61 @@ const config: UserConfig = {
 
     // Outline (right-side table of contents)
     outline: {
-      level: [2, 3],
-      label: '目录'
+      level: [1, 3],
+      label: "目录",
     },
 
     // Previous/Next page links
     docFooter: {
-      prev: '上一篇',
-      next: '下一篇'
+      prev: "上一篇",
+      next: "下一篇",
     },
 
     // Social links
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/HK-hub' },
+      { icon: "github", link: "https://github.com/HK-hub" },
       {
         icon: { svg: rssIconSVG },
-        link: '/rss.xml',
-        ariaLabel: 'RSS订阅 - 获取最新文章更新'
-      }
+        link: "/rss.xml",
+        ariaLabel: "RSS订阅 - 获取最新文章更新",
+      },
     ],
 
     // Footer
     footer: {
-      message: '基于 <a href="https://vitepress.dev" target="_blank">VitePress</a> 构建',
-      copyright: 'Copyright © 2026-present <a href="https://github.com/HK-hub" target="_blank">HK-hub</a> | 码出意境'
+      message:
+        '基于 <a href="https://vitepress.dev" target="_blank">VitePress</a> 构建',
+      copyright:
+        'Copyright © 2026-present <a href="https://github.com/HK-hub" target="_blank">HK-hub</a> | 码出意境',
     },
 
     // Edit link
     editLink: {
-      pattern: 'https://github.com/HK-hub/code-context/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页'
+      pattern: "https://github.com/HK-hub/code-context/edit/main/docs/:path",
+      text: "在 GitHub 上编辑此页",
     },
 
     // Last updated text
-    lastUpdatedText: '最后更新',
+    lastUpdatedText: "最后更新",
 
     // External link icon
     externalLinkIcon: true,
 
     // Return to top label (mobile)
-    returnToTopLabel: '返回顶部',
+    returnToTopLabel: "返回顶部",
 
     // Sidebar menu label (mobile)
-    sidebarMenuLabel: '菜单',
+    sidebarMenuLabel: "菜单",
 
     // Dark mode switch label
-    darkModeSwitchLabel: '切换主题',
+    darkModeSwitchLabel: "切换主题",
 
     // Dark mode
     appearance: true,
 
     // Local search (MiniSearch)
     search: {
-      provider: 'local',
+      provider: "local",
       options: {
         // MiniSearch 配置 - 优化中文搜索
         miniSearch: {
@@ -254,12 +285,13 @@ const config: UserConfig = {
             // 分词：支持中英文混合
             tokenize: (text: string) => {
               // 中文按字符分割，英文按空格分割
-              const chineseTokens = text.match(/[\u4e00-\u9fa5]+/g) || []
-              const englishTokens = text.toLowerCase().match(/[a-z0-9]+/g) || []
-              return [...chineseTokens, ...englishTokens]
+              const chineseTokens = text.match(/[\u4e00-\u9fa5]+/g) || [];
+              const englishTokens =
+                text.toLowerCase().match(/[a-z0-9]+/g) || [];
+              return [...chineseTokens, ...englishTokens];
             },
             // 术语处理：统一转为小写
-            processTerm: (term: string) => term.toLowerCase()
+            processTerm: (term: string) => term.toLowerCase(),
           },
           // 搜索选项：模糊搜索 + 权重提升
           searchOptions: {
@@ -268,68 +300,68 @@ const config: UserConfig = {
             boost: {
               title: 4, // 标题权重最高
               text: 2, // 正文权重次之
-              titles: 1 // 其他标题权重最低
-            }
-          }
+              titles: 1, // 其他标题权重最低
+            },
+          },
         },
         // 中文界面翻译
         translations: {
           button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档'
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
           },
           modal: {
-            noResultsText: '没有找到相关结果',
-            resetButtonTitle: '清除查询条件',
+            noResultsText: "没有找到相关结果",
+            resetButtonTitle: "清除查询条件",
             footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭'
-            }
-          }
-        }
-      }
-    }
+              selectText: "选择",
+              navigateText: "切换",
+              closeText: "关闭",
+            },
+          },
+        },
+      },
+    },
   },
 
   // Vite configuration
   vite: {
     define: {
       // Make base path available to client code if needed
-      __BASE_PATH__: JSON.stringify(base)
-    }
+      __BASE_PATH__: JSON.stringify(base),
+    },
   },
 
   // Mermaid configuration
   mermaid: {
     startOnLoad: true,
-    theme: 'default'
+    theme: "default",
   },
 
   // RSS feed generation
   buildEnd: async (siteConfig) => {
-    console.log('[VitePress] Generating RSS feeds...')
-    
+    console.log("[VitePress] Generating RSS feeds...");
+
     const rssConfig = {
-      title: '码出意境',
-      description: '技术博客与开源文档站，专注于后端、AI、全栈领域技术分享',
+      title: "码出意境",
+      description: "技术博客与开源文档站，专注于后端、AI、全栈领域技术分享",
       baseUrl: hostname,
-      author: 'HK-hub',
-      language: 'zh-CN'
-    }
-    
-    const docsDir = resolve(__dirname, '..')
-    const outputDir = resolve(__dirname, '../.vitepress/dist')
-    
-    const feed = await generateRSS(docsDir, rssConfig)
-    
-    writeFileSync(resolve(outputDir, 'rss.xml'), feed.rss2())
-    writeFileSync(resolve(outputDir, 'atom.xml'), feed.atom1())
-    writeFileSync(resolve(outputDir, 'feed.json'), feed.json1())
-    
-    console.log('[VitePress] RSS feeds generated successfully')
-  }
-}
+      author: "HK-hub",
+      language: "zh-CN",
+    };
+
+    const docsDir = resolve(__dirname, "..");
+    const outputDir = resolve(__dirname, "../.vitepress/dist");
+
+    const feed = await generateRSS(docsDir, rssConfig);
+
+    writeFileSync(resolve(outputDir, "rss.xml"), feed.rss2());
+    writeFileSync(resolve(outputDir, "atom.xml"), feed.atom1());
+    writeFileSync(resolve(outputDir, "feed.json"), feed.json1());
+
+    console.log("[VitePress] RSS feeds generated successfully");
+  },
+};
 
 // Export with mermaid support
-export default withMermaid(defineConfig(config))
+export default withMermaid(defineConfig(config));
