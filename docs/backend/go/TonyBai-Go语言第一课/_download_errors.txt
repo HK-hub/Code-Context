@@ -1,0 +1,6 @@
+[2026-04-11 16:15:43] https://learn.lianglianglee.com/专栏/Tony Bai · Go语言第一课/08 入口函数与包初始化：搞清Go程序的执行次序.md
+获取失败
+
+[2026-04-11 16:16:30] https://learn.lianglianglee.com/专栏/Tony Bai · Go语言第一课/10 变量声明：静态语言有别于动态语言的重要特征.md
+获取失败
+
